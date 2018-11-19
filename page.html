@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="utf-8">
-    <title>Index page</title>
+    <title>Dibss Solutions</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#fff">
@@ -14,13 +14,74 @@
   <body>
     <!-- BEGIN content -->
     <div class="out">
-      <h1>Index page</h1>
-      <p>Hello from partials/_header.html</p>
-      <svg class="icon icon-facebook">
-        <use xlink:href="img/sprite.svg#icon-facebook"></use>
-      </svg>
-      <li>Item1</li>
-      <li>Item2</li>
+      <header class="header">
+        <div class="header__inner">
+          <div class="header__left">
+            <h1 class="header__logo logo">
+              <a href="#">
+                <svg class="icon icon-DibssSolutions_logo">
+                  <use xlink:href="img/sprite.svg#icon-DibssSolutions_logo"></use>
+                </svg>
+              </a>
+            </h1>
+            <nav class="header__menu">
+              <ul class="main-menu">
+                <li class="main-menu__item">
+                  <a href="#" class="main-menu__link"> Solutions </a>
+                </li>
+                <li class="main-menu__item">
+                  <a href="#" class="main-menu__link"> About us </a>
+                </li>
+                <li class="main-menu__item">
+                  <a href="#" class="main-menu__link"> Clients </a>
+                </li>
+                <li class="main-menu__item">
+                  <a href="#" class="main-menu__link"> News &amp; Events </a>
+                </li>
+                <li class="main-menu__item">
+                  <a href="#" class="main-menu__link"> Contact us </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="header__right">
+            <div class="language">
+              <div class="language__current">
+                <svg class="icon icon-earth">
+                  <use xlink:href="img/sprite.svg#icon-earth"></use>
+                </svg> en</div>
+              <div class="language__arrow">
+                <svg class="icon icon-chevron-down">
+                  <use xlink:href="img/sprite.svg#icon-chevron-down"></use>
+                </svg>
+              </div>
+              <ul class="language__list">
+                <li class="language__item"><a href="#" class="language__link">ru</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+      <section class="main">
+        <div class="main__inner inner">
+          <div class="main__wrapper">
+            <div class="main__left">
+              <div class="main__content">
+                <h3 class="title title_xs title_white">- What we do</h3>
+                <h2 class="main__title title title_lg title_white">FRONT-END DEVELOPMENT</h2>
+                <div class="main__text">
+                  <p> We offer the best front-end development services for your digital agency and startups. Our team uses the latest technologies such as HTML, CSS, JS </p>
+                </div>
+              </div>
+            </div>
+            <div class="main__right">
+              <div class="main__img">
+                <img src="./img/laptop.png" alt="laptop">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
     <!-- END content -->
     <!-- BEGIN scripts -->
