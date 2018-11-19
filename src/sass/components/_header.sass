@@ -1,0 +1,79 @@
+.header
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    color: $white
+    padding-top: 21px
+    font-size: 14px
+    z-index: 5
+    &__inner
+        max-width: 1230px
+        margin: 0 auto
+        padding: 0 15px
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__left
+        display: flex
+    &__menu
+        display: flex
+        align-items: center
+        margin-left: 57px
+
+.logo
+    font-size: 39px
+    .icon
+        display: block
+.main-menu
+    display: flex
+    &__item
+        &:not(:first-child)
+            margin-left: 40px
+.language
+    position: relative
+    text-transform: uppercase
+    padding-right: 17px
+    cursor: pointer
+    &__current
+        display: flex
+        align-items: center
+        .icon
+            margin-right: 6px
+    &__arrow
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        right: 0
+        font-size: 4px
+        .icon
+            display: block
+    &__list
+        position: absolute
+        // padding: 4px 0
+        left: 0
+        right: 0
+        text-align: center
+        top: 100%
+        opacity: 0
+        visibility: hidden
+        transition: opacity .3s, visibility .3s
+        .language:hover &
+            opacity: 1
+            visibility: visible
+    &__item
+        padding: 0 17px 0 19px
+    &__link
+        position: relative
+        display: inline-block
+        border-bottom: 1px solid transparent
+        transition: border-color .3s
+        &:before
+            content: ""
+            position: absolute
+            top: -3px
+            bottom: -3px
+            left: -10px
+            right: -10px
+        &:hover
+            border-color: currentColor

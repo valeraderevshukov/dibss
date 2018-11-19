@@ -1,0 +1,46 @@
+.main
+    position: relative
+    background-image: linear-gradient(to bottom, #20232d, #151720)
+    overflow: hidden
+    color: $white
+    &:after
+        content: ""
+        position: absolute
+        width: 200%
+        height: 400px
+        left: 0
+        top: 100%
+        background-color: $white
+        transform-origin: 0 0
+        transform: rotate(-5deg)
+    &__inner
+        position: relative
+        z-index: 2
+    &__content
+        max-width: 418px
+        padding-right: 10px
+    &__wrapper
+        padding: 100px 0 50px
+        height: 100vh
+        min-height: 700px
+        display: flex
+        align-items: center
+    &__left,
+    &__right
+        width: 50%
+        // display: flex
+        // align-items: center
+    &__right
+        align-self: flex-end
+    &__img
+        // position: absolute
+        // width: 100%
+        // max-width: 960px
+        width: 960px
+        margin-left: -92px
+        // align-self: auto
+        img
+            max-width: 100%
+            display: block
+    &__title
+        margin: 7px 0 25px
