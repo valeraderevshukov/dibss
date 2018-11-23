@@ -19,6 +19,10 @@
     &__content
         max-width: 418px
         padding-right: 10px
+        position: relative
+        &-icon
+            &_blurred
+                filter: blur(10.2px)
     &__wrapper
         padding: 100px 0 50px
         height: 100vh
@@ -44,3 +48,13 @@
             display: block
     &__title
         margin: 7px 0 25px
+        text-align: left
+    &__subtitle
+        text-align: left
+
+.svg-triangle
+    position: absolute
+    font-size: 230px
+    color: rgba($blue, .22)
+    .icon
+        display: block

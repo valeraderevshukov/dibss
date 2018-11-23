@@ -1,0 +1,48 @@
+<section class="benefits">
+    <div class="benefits__inner inner inner_sm">
+        <h2 class="benefits__title title">
+            Our benefits
+        </h2>
+        <div class="benefits__subtitle">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium pretium tempor.
+        </div>
+        <div class="benefits__content">
+            {% for item in [
+                {
+                    svg: 'shield',
+                    title: 'Quality assurance',
+                    text: 'We offer the best front-end development services for your digital agency and startups. Our team uses the latest technologies such as HTML, CSS, JS'
+                },
+                {
+                    svg: 'multitask',
+                    title: 'Experience',
+                    text: 'We offer the best front-end development services for your digital agency and startups. Our team uses the latest technologies such as HTML, CSS, JS'
+                },
+                {
+                    svg: 'result',
+                    title: 'We are working on the result',
+                    text: 'We offer the best front-end development services for your digital agency and startups. Our team uses the latest technologies such as HTML, CSS, JS'
+                },
+                {
+                    svg: 'specialization',
+                    title: 'Specialization',
+                    text: 'We offer the best front-end development services for your digital agency and startups. Our team uses the latest technologies such as HTML, CSS, JS'
+                }
+            ] %}
+                <div class="benefits__item benefits-item">
+                    <div class="benefits-item__icon">
+                        <img src="./img/{{ item.svg }}.svg" alt="icon">
+                    </div>
+                    <h3 class="benefits-item__title">
+                        {{ item.title }}
+                    </h3>
+                    <div class="benefits-item__text">
+                        <p>
+                            {{ item.text }}
+                        </p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

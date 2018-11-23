@@ -1,0 +1,75 @@
+<section class="how-work">
+    <div class="how-work__inner inner">
+        <h2 class="how-work__title title">
+            This is how it works
+        </h2>
+        <div class="how-work__tabs tabs" data-tabs>
+            <div class="tabs__out">
+                <ul class="tabs__list">
+                    {% for item in [
+                        {
+                            id: 'html',
+                            icon: 'html',
+                            text: 'html'
+                        },
+                        {
+                            id: 'css',
+                            icon: 'css',
+                            text: 'css'
+                        },
+                        {
+                            id: 'javascript',
+                            icon: 'javascript',
+                            text: 'javascript'
+                        },
+                        {
+                            id: 'animation',
+                            icon: 'animation',
+                            text: 'animation'
+                        },
+                        {
+                            id: 'resources',
+                            icon: 'resources',
+                            text: 'resources'
+                        },
+                        {
+                            id: 'tools',
+                            icon: 'github',
+                            text: 'tools'
+                        }
+                    ] %}
+                        <li class="tabs__item" data-tabs-control="{{ item.id }}">
+                            <span class="tabs__icon">{{ mixins.icon( item.icon ) }}</span>
+                            {{ item.text }}
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="tabs__wrapper" data-tabs-wrapper>
+                {% for item in [
+                            'html',
+                            'css',
+                            'javascript',
+                            'animation',
+                            'resources',
+                            'tools'
+                    ] %}
+                    <div class="tabs__container" data-tabs-container="{{ item }}">
+                        <div class="tabs__text">
+                            <p>
+                                The trading platform is designed for both beginners and advanced traders. No prior knowledge of trading or experience with cryptocurrencies is required when you use the Blockport platform. 
+                                Buy your first cryptocurrencies and instantly access them through your personal dashboard.
+                            </p>
+                        </div>
+                        <div class="tabs__images">
+                            <div class="tabs__img"><img src="./img/nunjucks.png" alt="img"></div>
+                            <div class="tabs__img"><img src="./img/pug.png" alt="img"></div>
+                            <div class="tabs__img"><img src="./img/nunjucks.png" alt="img"></div>
+                            <div class="tabs__img"><img src="./img/pug.png" alt="img"></div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
