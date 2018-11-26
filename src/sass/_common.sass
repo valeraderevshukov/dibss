@@ -13,9 +13,15 @@ body
 	color: $blue
 	text-align: center
 	font-weight: 400
+	+sm
+		font-size: 24px
 	&_lg
 		font-size: 45px
 		line-height: 1.11
+		+sm
+			font-size: 32px
+	&_sm
+		font-size: 32px
 	&_xs
 		font-size: 20px
 		line-height: 2.5
@@ -31,8 +37,19 @@ body
 	height: 50px
 	font-size: 14px
 	text-transform: uppercase
+	+sm
+		height: 30px
 	.icon
 		margin-left: 15px
 		font-size: 9px
 	&_blue
 		color: $blue
+
+.submit-button
+	border-radius: 4px
+	font-size: 14px
+	height: 50px
+	color: $white
+	padding: 15px 46px
+	text-transform: uppercase
+	background-image: linear-gradient(258deg, #18baeb, #0074e4)

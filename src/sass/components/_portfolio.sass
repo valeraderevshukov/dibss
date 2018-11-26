@@ -1,15 +1,24 @@
 .portfolio
     padding-top: 124px
+    +sm
+        padding-top: 30px
     &__gallery
     &__top
         margin: 40px 0
         display: flex
         align-items: center
         justify-content: space-between
+        +sm
+            flex-direction: column
+            margin: 10px 0
     &__controls
         font-size: 14px
         text-transform: uppercase
         display: flex
+        +sm
+            flex-wrap: wrap
+        +xs
+            display: none
     &__control
         position: relative
         cursor: pointer
@@ -42,6 +51,8 @@
 .portfolio-item
     width: 50%
     padding: 12px
+    +sm
+        width: 100%
     &__wrap
         position: relative
         transition: box-shadow .3s
@@ -65,6 +76,8 @@
         img
             display: block
             max-width: 100%
+            +sm
+                width: 100%
     &__title
         font-size: 24px
         color: $blue

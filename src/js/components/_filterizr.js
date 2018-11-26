@@ -1,7 +1,9 @@
 import filterizr from '../../../node_modules/filterizr/dist/jquery.filterizr.min.js';
 import {ACTIVE} from '../constants';
-
-var filterizd = $('.filtr-container').filterizr();
+setTimeout(() => {
+  var filterizd = $('.filtr-container').filterizr();
+  
+}, 100);
 
 const filterControl = $('.js-filter-item');
 $(filterControl[0]).addClass(ACTIVE);

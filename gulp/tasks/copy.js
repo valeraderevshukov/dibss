@@ -28,11 +28,18 @@ gulp.task('copy:img', function() {
         .pipe(gulp.dest(config.dest.img));
 });
 
+gulp.task('copy:php', function() {
+    return gulp
+        .src(config.src.templates  + '/**/[^_]*.php')
+        .pipe(gulp.dest(config.dest.root));
+});
+
 gulp.task('copy', [
     'copy:img',
     // 'copy:rootfiles',
     // 'copy:lib',
-    'copy:fonts'
+    'copy:fonts',
+    'copy:php'
 ]);
 gulp.task('copy:watch', function() {
     gulp.watch(config.src.img+'/*', ['copy']);

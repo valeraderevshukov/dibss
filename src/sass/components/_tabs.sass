@@ -27,12 +27,27 @@
     width: 100%
     display: flex
     justify-content: space-between
+    +sm
+        flex-direction: column
     &__out
         width: 35%
+        +sm
+            width: 100%
+    &__list
+        +sm
+            display: flex
+            flex-wrap: wrap
     &__wrapper
         width: 65%
+        +sm
+            width: 100%
+            margin-top: 40px
     &__container
         padding-left: 153px
+        +md
+            padding-left: 50px
+        +sm
+            padding-left: 0
     &__item
         padding: 30px
         display: flex
@@ -43,17 +58,27 @@
         color: $gray
         line-height: 1
         min-height: 99px
+        +sm
+            min-height: auto
+            padding: 10px 15px
+            font-size: 16px
         &.is-active
             color: $blue
-            box-shadow: 0 0 20px 0 rgba(29, 17, 86, 0.12)
+            box-shadow: 0 0 20px 0 rgba($shadowColor, 0.12)
     &__icon
         margin-right: 27px
         transition: margin .3s
+        +sm
+            margin-right: 10px
         .tabs__item.is-active &
             margin-right: 35px
+            +sm
+                margin-right: 15px
         .icon
             display: block
             // transition: color .3s
+            +sm
+                font-size: 16px
             &-html
                 font-size: 19px
             &-css,
@@ -80,3 +105,5 @@
             max-width: 100%
     &__text
         max-width: 487px
+        +sm
+            max-width: none
