@@ -14,52 +14,62 @@
   <body>
     <!-- BEGIN content -->
     <div class="out">
-      <header class="header">
+      <header class="header js-header">
         <div class="header__inner">
-          <div class="header__left">
-            <h1 class="header__logo logo">
-              <a href="#">
-                <svg class="icon icon-DibssSolutions_logo">
-                  <use xlink:href="img/sprite.svg#icon-DibssSolutions_logo"></use>
-                </svg>
-              </a>
-            </h1>
-            <nav class="header__menu">
-              <ul class="main-menu">
-                <li class="main-menu__item">
-                  <a href="#" class="main-menu__link"> Solutions </a>
-                </li>
-                <li class="main-menu__item">
-                  <a href="#" class="main-menu__link"> About us </a>
-                </li>
-                <li class="main-menu__item">
-                  <a href="#" class="main-menu__link"> Clients </a>
-                </li>
-                <li class="main-menu__item">
-                  <a href="#" class="main-menu__link"> News &amp; Events </a>
-                </li>
-                <li class="main-menu__item">
-                  <a href="#" class="main-menu__link"> Contact us </a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-          <div class="header__right">
-            <div class="language">
-              <div class="language__current">
-                <svg class="icon icon-earth">
-                  <use xlink:href="img/sprite.svg#icon-earth"></use>
-                </svg> en</div>
-              <div class="language__arrow">
-                <svg class="icon icon-chevron-down">
-                  <use xlink:href="img/sprite.svg#icon-chevron-down"></use>
-                </svg>
+          <h1 class="header__logo logo">
+            <a href="#">
+              <svg class="icon icon-DibssSolutions_logo">
+                <use xlink:href="img/sprite.svg#icon-DibssSolutions_logo"></use>
+              </svg>
+            </a>
+          </h1>
+          <div class="header__wrap">
+            <div class="header__left">
+              <nav class="header__menu">
+                <ul class="main-menu">
+                  <li class="main-menu__item">
+                    <a href="#" class="main-menu__link"> Solutions </a>
+                  </li>
+                  <li class="main-menu__item">
+                    <a href="#" class="main-menu__link"> About us </a>
+                  </li>
+                  <li class="main-menu__item">
+                    <a href="#" class="main-menu__link"> Clients </a>
+                  </li>
+                  <li class="main-menu__item">
+                    <a href="#" class="main-menu__link"> News &amp; Events </a>
+                  </li>
+                  <li class="main-menu__item">
+                    <a href="#" class="main-menu__link"> Contact us </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="header__right">
+              <div class="language">
+                <div class="language__current">
+                  <svg class="icon icon-earth">
+                    <use xlink:href="img/sprite.svg#icon-earth"></use>
+                  </svg>
+                  <a href="#">en</a></div>
+                <div class="language__arrow">
+                  <svg class="icon icon-chevron-down">
+                    <use xlink:href="img/sprite.svg#icon-chevron-down"></use>
+                  </svg>
+                </div>
+                <ul class="language__list">
+                  <li class="language__item"><a href="#" class="language__link">ru</a></li>
+                </ul>
               </div>
-              <ul class="language__list">
-                <li class="language__item"><a href="#" class="language__link">ru</a></li>
-              </ul>
             </div>
           </div>
+          <button type="button" class="toggle-menu js-toggle-menu">
+            <span class="sandwich js-sandwich">
+              <span class="sw-topper"></span>
+              <span class="sw-bottom"><span class="sw-bottom__inner"></span></span>
+              <span class="sw-footer"></span>
+            </span>
+          </button>
         </div>
       </header>
       <section class="main">
@@ -77,7 +87,7 @@
                     <use xlink:href="img/sprite.svg#icon-triangle"></use>
                   </svg>
                 </div>
-                <div class="main__content-icon_blurred svg-triangle">
+                <div class="main__content-icon_blurred svg-triangle svg-triangle_blurred">
                   <svg class="icon icon-triangle">
                     <use xlink:href="img/sprite.svg#icon-triangle"></use>
                   </svg>
@@ -85,6 +95,16 @@
               </div>
             </div>
             <div class="main__right">
+              <div class="main__content-icon main__content-icon_sm svg-triangle">
+                <svg class="icon icon-triangle">
+                  <use xlink:href="img/sprite.svg#icon-triangle"></use>
+                </svg>
+              </div>
+              <div class="main__content-icon main__content-icon_xs svg-triangle svg-triangle_blurred">
+                <svg class="icon icon-triangle">
+                  <use xlink:href="img/sprite.svg#icon-triangle"></use>
+                </svg>
+              </div>
               <div class="main__img">
                 <img src="./img/laptop.png" alt="laptop">
               </div>
@@ -251,7 +271,7 @@
           </div>
         </div>
       </section>
-      <div class="portfolio">
+      <section class="portfolio">
         <div class="portfolio__inner inner inner_lg">
           <h2 class="portfolio__title title">Portfolio</h2>
           <div class="portfolio__gallery">
@@ -322,7 +342,117 @@
             </div>
           </div>
         </div>
-      </div>
+      </section>
+      <section class="contacts">
+        <div class="contacts__wrap">
+          <div class="contacts__inner inner inner_lg">
+            <div class="contacts__content">
+              <div class="contacts__text">
+                <h2 class="contacts__title title title_sm title_white"> Any question? Reach out to us and we’ll get back to you shortly. </h2>
+                <ul class="contacts__list">
+                  <li class="contacts__item contacts-item">
+                    <div class="contacts-item__icon contacts-item__icon_phone">
+                      <svg class="icon icon-phone">
+                        <use xlink:href="img/sprite.svg#icon-phone"></use>
+                      </svg>
+                    </div>
+                    <a href="tel:+3101234567" class="contacts-item__link">+31 0123 4567</a>
+                  </li>
+                  <li class="contacts__item contacts-item">
+                    <div class="contacts-item__icon contacts-item__icon_email">
+                      <svg class="icon icon-email">
+                        <use xlink:href="img/sprite.svg#icon-email"></use>
+                      </svg>
+                    </div>
+                    <a href="mailto:info@bit.io" class="contacts-item__link">info@bit.io</a>
+                  </li>
+                  <li class="contacts__item contacts-item">
+                    <div class="contacts-item__icon contacts-item__icon_telegram">
+                      <svg class="icon icon-telegram">
+                        <use xlink:href="img/sprite.svg#icon-telegram"></use>
+                      </svg>
+                    </div>
+                    <a href="https://telegram.org/" class="contacts-item__link">Join us on Telegram</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="contacts__feedback">
+                <div class="feedback">
+                  <h2 class="feedback__title title"> Get in touch </h2>
+                  <form class="feedback__form feedback-form js-form">
+                    <div class="feedback-form__item form-input">
+                      <input class="input" type="text" placeholder="Your Name">
+                    </div>
+                    <div class="feedback-form__item form-input">
+                      <input class="input" type="email" placeholder="Your Email">
+                    </div>
+                    <div class="feedback-form__item form-input">
+                      <textarea class="input" placeholder="Your Message"></textarea>
+                    </div>
+                    <div class="feedback-form__submit">
+                      <button type="submit" class="submit-button"> submit </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="contacts__icons contacts-icons">
+            <div class="contacts-icons__inner inner inner_lg">
+              <div class="contacts-icons__svg svg-triangle">
+                <svg class="icon icon-triangle">
+                  <use xlink:href="img/sprite.svg#icon-triangle"></use>
+                </svg>
+              </div>
+              <div class="contacts-icons__svg contacts-icons__svg_blurred svg-triangle svg-triangle_blurred">
+                <svg class="icon icon-triangle">
+                  <use xlink:href="img/sprite.svg#icon-triangle"></use>
+                </svg>
+              </div>
+              <div class="contacts-icons__svg svg-triangle">
+                <svg class="icon icon-triangle">
+                  <use xlink:href="img/sprite.svg#icon-triangle"></use>
+                </svg>
+              </div>
+              <div class="contacts-icons__svg contacts-icons__svg_small svg-triangle">
+                <svg class="icon icon-triangle">
+                  <use xlink:href="img/sprite.svg#icon-triangle"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="footer">
+        <div class="footer__inner inner inner_lg">
+          <div class="footer__copyright"> © All rights reserved </div>
+          <div class="footer__social">
+            <ul class="social">
+              <li class="social__item">
+                <a href="#" class="social__link social__link_facebook">
+                  <svg class="icon icon-facebook">
+                    <use xlink:href="img/sprite.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="#" class="social__link social__link_twitter">
+                  <svg class="icon icon-twitter">
+                    <use xlink:href="img/sprite.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="#" class="social__link social__link_telegram">
+                  <svg class="icon icon-telegram">
+                    <use xlink:href="img/sprite.svg#icon-telegram"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
     </div>
     <!-- END content -->
     <!-- BEGIN scripts -->
