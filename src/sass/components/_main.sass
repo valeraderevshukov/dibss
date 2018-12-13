@@ -1,95 +1,117 @@
 .main
-    position: relative
-    background-image: linear-gradient(to bottom, #20232d, #151720)
-    overflow: hidden
-    color: $white
-    &:after
-        content: ""
-        position: absolute
-        width: 200%
-        height: 400px
-        left: 0
-        top: 100%
-        background-color: $white
-        transform-origin: 0 0
-        transform: rotate(-5deg)
-    &__inner
-        position: relative
-        z-index: 2
-    &__content
-        max-width: 418px
-        padding-right: 10px
-        position: relative
-        &-icon
-            left: -30px
-            bottom: -118px
-            z-index: -1
-            &_blurred
-                filter: blur(10.2px)
-                left: -119px
-                bottom: -185px
-                z-index: -1
-            &_sm.svg-triangle
-                left: 5px
-                top: -52px
-                font-size: 133px
-                filter: blur(4.2px)
-                bottom: auto
-                opacity: .71
-            &_xs.svg-triangle
-                filter: blur(10.2px)
-                font-size: 87px
-                left: 67px
-                top: -86px
-                bottom: auto
-                opacity: .71
-    &__wrapper
-        padding: 100px 0 50px
-        height: 100vh
-        min-height: 700px
-        display: flex
-        align-items: center
-        +sm
-            height: auto
-            min-height: auto
-            flex-direction: column
-    &__left,
-    &__right
-        width: 50%
-        // display: flex
-        // align-items: center
-        +sm
-            width: 100%
-    &__right
-        position: relative
-        align-self: flex-end
-        +sm
-            align-self: auto
-            margin-top: 20px
-    &__img
-        // position: absolute
-        // width: 100%
-        // max-width: 960px
-        width: 960px
-        margin-left: -92px
-        // align-self: auto
-        +sm
-            margin-left: 0
-            width: auto
-        img
-            max-width: 100%
-            display: block
-    &__title
-        margin: 7px 0 25px
-        text-align: left
-    &__subtitle
-        text-align: left
+	position: relative
+	background-image: linear-gradient(to bottom, #20232d, #151720)
+	overflow: hidden
+	color: $white
+
+	&:after
+		content: ""
+		position: absolute
+		width: 200%
+		height: 400px
+		left: 0
+		top: 100%
+		background-color: $white
+		transform-origin: 0 0
+		transform: rotate(-5deg)
+
+	&__inner
+		position: relative
+		z-index: 2
+
+	&__content
+		max-width: 418px
+		padding-right: 10px
+		position: relative
+
+		&-icon
+			left: -30px
+			bottom: -118px
+			z-index: -1
+
+			&_blurred
+				filter: blur(10.2px)
+				left: -119px
+				bottom: -185px
+				z-index: -1
+
+			&_sm.svg-triangle
+				left: 5px
+				top: -52px
+				font-size: 133px
+				filter: blur(4.2px)
+				bottom: auto
+				opacity: .71
+
+			&_xs.svg-triangle
+				filter: blur(10.2px)
+				font-size: 87px
+				left: 67px
+				top: -86px
+				bottom: auto
+				opacity: .71
+
+	&__wrapper
+		padding: 100px 0 50px
+		height: 100vh
+		min-height: 700px
+		display: flex
+		align-items: center
+		+sm
+			height: auto
+			min-height: auto
+			flex-direction: column
+
+	&__left,
+	&__right
+		width: 50%
+		// display: flex
+		// align-items: center
+		+sm
+			width: 100%
+
+	&__right
+		position: relative
+		align-self: flex-end
+		+sm
+			align-self: auto
+			margin-top: 20px
+
+	&__img
+		// position: absolute
+		// width: 100%
+		// max-width: 960px
+		width: 960px
+		margin-left: -92px
+		// align-self: auto
+		+sm
+			margin-left: 0
+			width: auto
+
+		img
+			max-width: 100%
+			display: block
+
+	&__title
+		margin: 7px 0 25px
+		text-align: left
+
+	&__subtitle
+		text-align: left
+
+	&__word
+		position: relative
+
+	&__letter
+		position: relative
 
 .svg-triangle
-    position: absolute
-    font-size: 230px
-    color: rgba($blue, .22)
-    &_blurred
-        color: rgba(7, 42, 68, 0.71)
-    .icon
-        display: block
+	position: absolute
+	font-size: 230px
+	color: rgba($blue, .22)
+
+	&_blurred
+		color: rgba(7, 42, 68, 0.71)
+
+	.icon
+		display: block
