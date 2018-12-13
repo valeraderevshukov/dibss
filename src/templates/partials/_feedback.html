@@ -1,21 +1,26 @@
 <div class="feedback">
-    <h2 class="feedback__title title">
-        Get in touch
-    </h2>
-    <form class="feedback__form feedback-form js-form">
-        <div class="feedback-form__item form-input">
-            <input class="input" type="text" placeholder="Your Name">
+  <h2 class="feedback__title title">
+    Get in touch
+  </h2>
+  <form class="feedback__form feedback-form js-form">
+    <div class="feedback-form__item form-input">
+      <input class="input" type="text" placeholder="Your Name">
+    </div>
+    <div class="feedback-form__item form-input">
+      <input class="input" type="email" placeholder="Your Email">
+    </div>
+    <div class="feedback-form__item form-input">
+      <textarea class="input" placeholder="Your Message"></textarea>
+    </div>
+    <div class="feedback-form__submit">
+      <button type="submit" class="feedback-form__submit-button submit-button js-submit-button">
+        submit
+      </button>
+      <div class="feedback-form__progress-bar js-submit-progress">
+        <div class="feedback-form__checkmark js-submit-checkmark">
+          {{ mixins.icon('checkmark') }}
         </div>
-        <div class="feedback-form__item form-input">
-            <input class="input" type="email" placeholder="Your Email">
-        </div>
-        <div class="feedback-form__item form-input">
-            <textarea class="input" placeholder="Your Message"></textarea>
-        </div>
-        <div class="feedback-form__submit">
-            <button type="submit" class="submit-button">
-                submit
-            </button>
-        </div>
-    </form>
+      </div>
+    </div>
+  </form>
 </div>
