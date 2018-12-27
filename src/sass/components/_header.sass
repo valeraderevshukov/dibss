@@ -1,124 +1,149 @@
 .header
-    position: absolute
-    top: 0
-    left: 0
-    right: 0
-    color: $white
-    padding-top: 21px
-    font-size: 14px
-    z-index: 5
-    &__inner
-        max-width: 1230px
-        margin: 0 auto
-        padding: 0 15px
-        display: flex
-        justify-content: space-between
-        align-items: center
-    &__wrap
-        width: 100%
-        display: flex
-        align-items: center
-        justify-content: space-between
-        +sm
-            position: absolute
-            top: 0
-            left: 0
-            height: 100vh
-            background-color: #fff
-            color: $black
-            align-items: flex-start
-            padding: 70px 15px
-            overflow: auto
-            transform: translateY(-100%)
-            transition: transform .3s
-            .header.is-open-menu &
-                transform: translateY(0)
-    &__left
-        // display: flex
-    &__menu
-        display: flex
-        align-items: center
-        margin-left: 57px
-        +xs
-            margin-left: 0
-    &__right
-        +sm
-            padding-right: 57px
-        +xs
-            padding-right: 0
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	color: $white
+	padding-top: 21px
+	font-size: 14px
+	z-index: 5
+
+	&__inner
+		max-width: 1230px
+		margin: 0 auto
+		padding: 0 15px
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+	&__wrap
+		width: 100%
+		display: flex
+		align-items: center
+		justify-content: space-between
+		+sm
+			position: absolute
+			top: 0
+			left: 0
+			height: 100vh
+			background-color: #fff
+			color: $black
+			align-items: flex-start
+			padding: 70px 15px
+			overflow: auto
+			transform: translateY(-100%)
+			transition: transform .3s
+			.header.is-open-menu &
+				transform: translateY(0)
+
+	&__left
+	// display: flex
+	&__menu
+		display: flex
+		align-items: center
+		margin-left: 57px
+		+xs
+			margin-left: 0
+
+	&__right
+		+sm
+			padding-right: 57px
+		+xs
+			padding-right: 0
+
+	&__logo
+		overflow: visible
+		.icon
+			overflow: visible
+			width: 117px
+			height: 39px
+			fill: $white
 
 .logo
-    font-size: 39px
-    .icon
-        display: block
+	font-size: 39px
+	.icon
+		display: block
+
 .main-menu
-    display: flex
-    +sm
-        flex-direction: column
-    &__item
-        &:not(:first-child)
-            margin-left: 40px
-            +sm
-                margin-left: 0
-                margin-top: 40px
+	display: flex
+	+sm
+		flex-direction: column
+
+	&__item
+		&:not(:first-child)
+			margin-left: 40px
+			+sm
+				margin-left: 0
+				margin-top: 40px
+
 .language
-    position: relative
-    text-transform: uppercase
-    padding-right: 17px
-    cursor: pointer
-    &__current
-        display: flex
-        align-items: center
-        .icon
-            margin-right: 6px
-            +sm
-                display: none
-    &__arrow
-        position: absolute
-        top: 50%
-        transform: translateY(-50%)
-        right: 0
-        font-size: 4px
-        +sm
-            display: none
-        .icon
-            display: block
-    &__list
-        position: absolute
-        // padding: 4px 0
-        left: 0
-        right: 0
-        text-align: center
-        top: 100%
-        opacity: 0
-        visibility: hidden
-        transition: opacity .3s, visibility .3s
-        +sm
-            position: relative
-            opacity: 1
-            visibility: visible
-            margin-top: 10px
-        .language:hover &
-            opacity: 1
-            visibility: visible
-    &__item
-        padding: 0 17px 0 19px
-        +sm
-            padding: 0
-    &__link
-        position: relative
-        display: inline-block
-        border-bottom: 1px solid transparent
-        transition: border-color .3s
-        &:before
-            content: ""
-            position: absolute
-            top: -3px
-            bottom: -3px
-            left: -10px
-            right: -10px
-        &:hover
-            border-color: currentColor
+	position: relative
+	text-transform: uppercase
+	padding-right: 17px
+	cursor: pointer
+
+	&__current
+		display: flex
+		align-items: center
+
+		.icon
+			margin-right: 6px
+			+sm
+				display: none
+
+	&__arrow
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		right: 0
+		font-size: 4px
+		+sm
+			display: none
+
+		.icon
+			display: block
+
+	&__list
+		position: absolute
+		// padding: 4px 0
+		left: 0
+		right: 0
+		text-align: center
+		top: 100%
+		opacity: 0
+		visibility: hidden
+		transition: opacity .3s, visibility .3s
+		+sm
+			position: relative
+			opacity: 1
+			visibility: visible
+			margin-top: 10px
+
+		.language:hover &
+			opacity: 1
+			visibility: visible
+
+	&__item
+		padding: 0 17px 0 19px
+		+sm
+			padding: 0
+
+	&__link
+		position: relative
+		display: inline-block
+		border-bottom: 1px solid transparent
+		transition: border-color .3s
+
+		&:before
+			content: ""
+			position: absolute
+			top: -3px
+			bottom: -3px
+			left: -10px
+			right: -10px
+
+		&:hover
+			border-color: currentColor
 
 
 /*Sandwich*/
@@ -133,6 +158,7 @@
 	background-color: transparent
 	+sm
 		display: block
+
 	&:before
 		content: ""
 		position: absolute
@@ -140,6 +166,7 @@
 		left: -10px
 		right: -10px
 		bottom: -10px
+
 	&:focus
 		outline: none
 
@@ -155,25 +182,29 @@ $h: 3px
 	z-index: 200
 	top: 50%
 	transform: translateY(-50%)
+
 .sw-topper
 	display: block
 	position: relative
 	transform-origin: left top
-	width: $w 
+	width: $w
 	height: $h
 	background: $white
-	border: none 
+	border: none
 	transition: transform 0.5s, background-color .5s
 	margin-bottom: 5px
 	+xs
 		margin-bottom: 4px
+
 	.header.is-fixed &,
 	.header.is-open-menu &
 		background-color: #363636
+
 .sw-bottom
 	overflow: hidden
 	display: block
 	position: relative
+
 	&__inner
 		display: block
 		position: relative
@@ -184,9 +215,11 @@ $h: 3px
 		border: none
 		transition: transform 0.3s ease-in-out, opacity .5s ease-in-out, background-color .5s
 		margin-bottom: 5px
+
 		.header.is-fixed &,
 		.header.is-open-menu &
 			background-color: #363636
+
 		+xs
 			margin-bottom: 4px
 
@@ -199,6 +232,7 @@ $h: 3px
 	background: $white
 	border: none
 	transition: transform 0.5s, background-color .5s
+
 	.header.is-fixed &,
 	.header.is-open-menu &
 		background-color: #363636
@@ -206,9 +240,11 @@ $h: 3px
 .sandwich.is-active
 	.sw-topper
 		transform: translate(0, -3px) rotate(45deg)
+
 	.sw-bottom__inner
 		opacity: 0
 		transform: translateX(-105%)
+
 	.sw-footer
 		transform: translate(0, 3px) rotate(-45deg)
 		+xs

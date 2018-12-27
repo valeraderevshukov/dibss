@@ -6,6 +6,15 @@ var controller = new ScrollMagic.Controller();
 
 $(window).ready(function() {
 
+  var headerScene = new ScrollMagic.Scene({
+    triggerElement: '.header'
+  })
+    .addIndicators({name: 'headeer Scene'})
+    .addTo(controller)
+    .on('enter', () => {
+      animations.triggerHeaderSceneAnimation();
+    });
+
   var mainScene = new ScrollMagic.Scene({
     triggerElement: '.main'
   })
