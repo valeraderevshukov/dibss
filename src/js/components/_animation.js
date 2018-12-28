@@ -121,26 +121,23 @@ function triggerStagedAnimation(scene) {
 
 /** SCENES */
 function triggerHeaderSceneAnimation() {
+  /** partial animation*/
   let partialItems = $('[data-anim-type*=\'partial\']');
 
-  /** partial animation*/
-  let groupArray = [];
-  for (let i = 0; i < 3; i++) {
-    groupArray.push(partialItems.filter((index) => {
-      return index % 3 === i;
-    }));
-  }
-  for (let i = 0; i < groupArray.length; i++) {
-    setTimeout(() => {
-      new TimelineMax().to(groupArray[i], 0.4, {
-        x: 0,
-        y: 0,
-        rotation: 0,
-        opacity: 1,
-        ease: Sine.easeOut
-      }, 0.2 * i);
-    });
-  }
+  partialItems.each(function() {
+    let item = $(this);
+    let delay = +item.attr(DELAY_ANIMATION_ATTRIBUTE) || 0;
+    let duration = +item.attr(DURATION_ANIMATION_ATTRIBUTE) || 1;
+
+    new TweenMax.to(item, duration, {
+      x: 0,
+      y: 0,
+      rotation: 0,
+      opacity: 1,
+      ease: Sine.easeOut
+    }).delay(delay);
+  });
+
   triggerStagedAnimation($('.header'));
 }
 
