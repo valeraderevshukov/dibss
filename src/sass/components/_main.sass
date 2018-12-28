@@ -78,6 +78,7 @@
 			margin-top: 20px
 
 	&__img
+		position: relative
 		// position: absolute
 		// width: 100%
 		// max-width: 960px
@@ -91,6 +92,22 @@
 		img
 			max-width: 100%
 			display: block
+
+	&__video
+		z-index: 1
+		position: absolute
+		top: 6.69%
+		bottom: 10.39%
+		right: 11.718%
+		left: 11.822%
+		&:before
+			content: ''
+			position: absolute
+			width: 100%
+			height: 100%
+			left: 0
+			top: 0
+			background-color: rgba(#142338, 0.45)
 
 	&__title
 		margin: 7px 0 25px

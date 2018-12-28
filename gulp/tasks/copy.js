@@ -28,6 +28,12 @@ gulp.task('copy:img', function() {
         .pipe(gulp.dest(config.dest.img));
 });
 
+gulp.task('copy:video', function() {
+  return gulp
+    .src(config.src.video + '/**/*.*')
+    .pipe(gulp.dest(config.dest.video));
+});
+
 gulp.task('copy:php', function() {
     return gulp
         .src(config.src.templates  + '/**/[^_]*.php')
@@ -38,6 +44,7 @@ gulp.task('copy', [
     'copy:img',
     // 'copy:rootfiles',
     // 'copy:lib',
+    'copy:video',
     'copy:fonts',
     'copy:php'
 ]);
