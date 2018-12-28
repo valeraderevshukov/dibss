@@ -132,7 +132,7 @@ function triggerHeaderSceneAnimation() {
   }
   for (let i = 0; i < groupArray.length; i++) {
     setTimeout(() => {
-      new TimelineMax().to(groupArray[i], 0.6, {
+      new TimelineMax().to(groupArray[i], 0.4, {
         x: 0,
         y: 0,
         rotation: 0,

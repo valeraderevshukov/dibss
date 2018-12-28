@@ -16,7 +16,7 @@ $(window).ready(function() {
     });
 
   var mainScene = new ScrollMagic.Scene({
-    triggerElement: '.main'
+    triggerElement: '.main',
   })
     .addIndicators({name: 'main Scene'})
     .addTo(controller)
