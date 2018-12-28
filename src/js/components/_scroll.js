@@ -17,6 +17,7 @@ $(window).ready(function() {
 
   var mainScene = new ScrollMagic.Scene({
     triggerElement: '.main',
+    reverse: false
   })
     .addIndicators({name: 'main Scene'})
     .addTo(controller)
@@ -25,7 +26,8 @@ $(window).ready(function() {
     });
 
   var benefitsScene = new ScrollMagic.Scene({
-    triggerElement: '.benefits'
+    triggerElement: '.benefits',
+    reverse: false
   })
     .addIndicators({name: 'benefits Scene'})
     .addTo(controller)
@@ -34,7 +36,8 @@ $(window).ready(function() {
     });
 
   var howWorkScene = new ScrollMagic.Scene({
-    triggerElement: '.how-work'
+    triggerElement: '.how-work',
+    reverse: false
   })
     .addIndicators({name: 'how-work Scene'})
     .addTo(controller)
@@ -43,7 +46,8 @@ $(window).ready(function() {
     });
 
   var portfolioScene = new ScrollMagic.Scene({
-    triggerElement: '.portfolio'
+    triggerElement: '.portfolio',
+    reverse: false
   })
     .addIndicators({name: 'portfolio Scene'})
     .addTo(controller)
@@ -52,7 +56,8 @@ $(window).ready(function() {
     });
 
   var contactsScene = new ScrollMagic.Scene({
-    triggerElement: '.contacts'
+    triggerElement: '.contacts',
+    reverse: false
   })
     .addIndicators({name: 'contacts Scene'})
     .addTo(controller)

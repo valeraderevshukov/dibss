@@ -1,9 +1,11 @@
 <section class="benefits">
     <div class="benefits__inner inner inner_sm">
-        <h2 class="benefits__title title">
+        <h2 class="benefits__title title"
+            data-anim-type="wave" data-anim-delay="0" data-anim-duration="0.8">
             Our benefits
         </h2>
-        <div class="benefits__subtitle">
+        <div class="benefits__subtitle"
+             data-anim-type="staged" data-anim-delay="0" data-anim-duration="0.8">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium pretium tempor.
         </div>
         <div class="benefits__content">
@@ -33,10 +35,12 @@
                     <div class="benefits-item__icon">
                         <img src="./img/{{ item.svg }}.svg" alt="icon">
                     </div>
-                    <h3 class="benefits-item__title">
+                    <h3 class="benefits-item__title"
+                        data-anim-type="wave" data-anim-delay="{{loop.index * 0.2}}" data-anim-duration="0.8">
                         {{ item.title }}
                     </h3>
-                    <div class="benefits-item__text">
+                    <div class="benefits-item__text"
+                         data-anim-type="staged" data-anim-delay="{{loop.index * 0.2}}" data-anim-duration="0.8">
                         <p>
                             {{ item.text }}
                         </p>

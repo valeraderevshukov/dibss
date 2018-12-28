@@ -148,19 +148,27 @@ function triggerMainSceneAnimation() {
 }
 
 function triggerBenefitsSceneAnimation() {
-  console.log('Benefits scene trigger');
+  let benefitsScene = $('.benefits');
+  triggerWaveAnimation(benefitsScene);
+  triggerStagedAnimation(benefitsScene);
 }
 
 function triggerHowWorkSceneAnimation() {
-  console.log('HowWork scene trigger');
+  let howWorkScene = $('.how-work');
+  triggerWaveAnimation(howWorkScene);
+  triggerStagedAnimation(howWorkScene);
 }
 
 function triggerPortfolioSceneAnimation() {
-  console.log('Portfolio scene trigger');
+  let portfolioScene = $('.portfolio');
+  triggerWaveAnimation(portfolioScene);
+  triggerStagedAnimation(portfolioScene);
 }
 
 function triggerContactsSceneAnimation() {
-  console.log('Contacts scene trigger');
+  let contactsScene = $('.contacts');
+  triggerWaveAnimation(contactsScene);
+  triggerStagedAnimation(contactsScene);
 }
 
 export {
