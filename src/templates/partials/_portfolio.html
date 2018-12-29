@@ -1,73 +1,75 @@
 <section class="portfolio">
-    <div class="portfolio__inner inner inner_lg">
-        <h2 class="portfolio__title title"
-            data-anim-type="wave" data-anim-delay="0" data-anim-duration="0.8">Portfolio</h2>
-        <div class="portfolio__gallery">
-            <div class="portfolio__top">
-                <ul class="portfolio__controls">
-                    {% for item in [
-                        {
-                            name: 'All work',
-                            id: 'all'
-                        },
-                        {
-                            name: 'ui',
-                            id: 'ui'
-                        },
-                        {
-                            name: 'Product',
-                            id: 'product'
-                        },
-                        {
-                            name: 'Design',
-                            id: 'design'
-                        },
-                        {
-                            name: 'Mobile app',
-                            id: 'mobile-app'
-                        }
-                    ] %}
-                        <li class="portfolio__control js-filter-item" data-filter="{{ item.id }}">{{ item.name }}</li>
-                    {% endfor %}
-                </ul>
-                <a href="#" class="view-button view-button_blue">View all Project {{ mixins.icon('right-arrow') }}</a>
-            </div>
-            <div class="portfolio__list-wrap">
-                <div class="portfolio__list filtr-container">
-                    {% for item in [
-                        {
-                            id: 'ui',
-                            title: 'Shoply web Design',
-                            img: 'img.png'
-                        },
-                        {
-                            id: 'product',
-                            title: 'Shoply web Design',
-                            img: 'img.png'
-                        },
-                        {
-                            id: 'mobile-app',
-                            title: 'Shoply web Design',
-                            img: 'img.png'
-                        },
-                        {
-                            id: 'design, ui',
-                            title: 'Shoply web Design',
-                            img: 'img.png'
-                        }
-                    ] %}
-                        <div class="portfolio__item portfolio-item filtr-item" data-category="{{ item.id }}">
-                            <div class="portfolio-item__wrap">
-                                <h3 class="portfolio-item__title">{{ item.title }}</h3>
-                                <div class="portfolio-item__img">
-                                    <img src="./img/{{ item.img }}" alt="sample">
-                                </div>
-                                <a href="#" class="portfolio-item__link view-button">View Project {{ mixins.icon('right-arrow') }}</a>
-                            </div>
-                        </div>
-                    {% endfor %}
+  <div class="portfolio__inner inner inner_lg">
+    <h2 class="portfolio__title title"
+        data-anim-type="staged" data-anim-delay="0" data-anim-duration="0.8">Portfolio</h2>
+    <div class="portfolio__gallery">
+      <div class="portfolio__top"
+           data-anim-type="staged" data-anim-delay="0" data-anim-duration="0.8">
+        <ul class="portfolio__controls">
+          {% for item in [
+            {
+              name: 'All work',
+              id: 'all'
+            },
+            {
+              name: 'ui',
+              id: 'ui'
+            },
+            {
+              name: 'Product',
+              id: 'product'
+            },
+            {
+              name: 'Design',
+              id: 'design'
+            },
+            {
+              name: 'Mobile app',
+              id: 'mobile-app'
+            }
+          ] %}
+            <li class="portfolio__control js-filter-item" data-filter="{{ item.id }}">{{ item.name }}</li>
+          {% endfor %}
+        </ul>
+        <a href="#" class="view-button view-button_blue">View all Project {{ mixins.icon('right-arrow') }}</a>
+      </div>
+      <div class="portfolio__list-wrap">
+        <div class="portfolio__list filtr-container">
+          {% for item in [
+            {
+              id: 'ui',
+              title: 'Shoply web Design',
+              img: 'img.png'
+            },
+            {
+              id: 'product',
+              title: 'Shoply web Design',
+              img: 'img.png'
+            },
+            {
+              id: 'mobile-app',
+              title: 'Shoply web Design',
+              img: 'img.png'
+            },
+            {
+              id: 'design, ui',
+              title: 'Shoply web Design',
+              img: 'img.png'
+            }
+          ] %}
+            <div class="portfolio__item portfolio-item filtr-item" data-category="{{ item.id }}">
+              <div class="portfolio-item__wrap"
+                   data-anim-type="staged" data-anim-delay="{{ loop.index * 0.2 }}" data-anim-duration="0.6">
+                <h3 class="portfolio-item__title">{{ item.title }}</h3>
+                <div class="portfolio-item__img">
+                  <img src="./img/{{ item.img }}" alt="sample">
                 </div>
+                <a href="#" class="portfolio-item__link view-button">View Project {{ mixins.icon('right-arrow') }}</a>
+              </div>
             </div>
+          {% endfor %}
         </div>
+      </div>
     </div>
+  </div>
 </section>

@@ -16,7 +16,7 @@
               'About us',
               'Clients',
               'News & Events',
-              'Contact u'
+              'Contact us'
             ] %}
               <li class="main-menu__item"
                   data-anim-type="staged" data-anim-direction="ltr" data-anim-delay="{{ 0.8 + (loop.index) * 0.1}}" data-anim-duration="0.3">
@@ -29,7 +29,8 @@
         </nav>
       </div>
       <div class="header__right">
-        <div class="language">
+        <div class="language"
+             data-anim-type="staged" data-anim-direction="rtl" data-anim-delay="1.5" data-anim-duration="0.3">
           <div class="language__current">{{ mixins.icon('earth') }}<a href="#">en</a></div>
           <div class="language__arrow">
             {{ mixins.icon('chevron-down') }}

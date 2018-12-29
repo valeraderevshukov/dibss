@@ -7,7 +7,7 @@ let parallaxItemReverse = $('.js-parallax-item-reverse');
 
 WIN.ready(() => {
 
-  WIN.mousemove((e) => {    
+  WIN.mousemove((e) => {
     const xPercentPos = +((e.clientX / WIN.outerWidth()) * 100).toFixed(1);
     const yPercentPos = +((e.clientY / WIN.outerHeight()) * 100).toFixed(1);
     const translateX = (10 * xPercentPos - 500) / -100;
