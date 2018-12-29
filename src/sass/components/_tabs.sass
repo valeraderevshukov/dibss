@@ -62,7 +62,7 @@
             min-height: auto
             padding: 10px 15px
             font-size: 16px
-        &.is-active
+        &.is-active,&:hover
             color: $blue
             box-shadow: 0 0 20px 0 rgba($shadowColor, 0.12)
     &__icon
@@ -70,7 +70,8 @@
         transition: margin .3s
         +sm
             margin-right: 10px
-        .tabs__item.is-active &
+        .tabs__item.is-active &,
+        .tabs__item:hover &
             margin-right: 35px
             +sm
                 margin-right: 15px
