@@ -1,27 +1,37 @@
 ---
-title: Index page
+title: Dibss Solutions
 ---
 {% extends "layouts/_layout.html" %}
 
 {% block content %}
-	
-	{# variable example #}
-	<h1>{{title}}</h1>
 
-	
-	{# partial example #}
+	{# BEGIN HEADER #}
 	{% include "partials/_header.html" %}
+	{# END HEADER #}
 
-	{# mixin example #}
-	{{mixins.icon('facebook')}}
+	{# BEGIN MAIN #}
+	{% include "partials/_main.html" %}
+	{# END MAIN #}
 
+	{# BEGIN benefits #}
+	{% include "partials/_benefits.html" %}
+	{# END benefits #}
 
-	{# data usage example #}
-		{% import "data/data.html" as tests %}
-		
-		{% for test in tests.list %}
-		<li>{{test.title}}</li>
-		{% endfor %}
-	{# end of example #}
+	{# BEGIN how-work #}
+	{% include "partials/_how-work.html" %}
+	{# END how-work #}
+
+	{# BEGIN portfolio #}
+	{% include "partials/_portfolio.html" %}
+	{# END portfolio #}
+
+	{# BEGIN contacts #}
+	{% include "partials/_contacts.html" %}
+	{# END contacts #}
+
+	{# BEGIN footer #}
+	{% include "partials/_footer.html" %}
+	{# END footer #}
+
 
 {% endblock %}

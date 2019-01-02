@@ -1,0 +1,98 @@
+.contacts
+    padding: 108px 0 145px
+    +sm
+        padding: 30px 0
+    &__wrap
+        position: relative
+        padding: 99px 0 111px
+        background-image: linear-gradient(to bottom, #20232d, #151720)
+        +sm
+            padding: 30px 0
+    &__icons
+    &__content
+        position: relative
+        z-index: 5
+    &__text
+        max-width: 490px
+        color: $white
+        width: 48%
+        padding-right: 11px
+        +md
+            max-width: none
+            width: 100%
+            padding: 0
+    &__title
+        text-align: left
+        line-height: 1.35
+        +md
+            text-align: center
+    &__list
+        margin-top: 56px
+        +md
+            display: flex
+            flex-direction: column
+            align-items: center
+        +sm
+            margin-top: 20px
+    &__item
+        &:not(:first-child)
+            margin-top: 37px
+            +sm
+                margin-top: 10px
+    &__feedback
+        max-width: 546px
+        width: 52%
+        position: absolute
+        top: -22px
+        right: 0
+        z-index: 5
+        +md
+            position: initial
+            max-width: none
+            width: 100%
+            margin-top: 40px
+
+.contacts-item
+    position: relative
+    padding-left: 46px
+    &__icon
+        position: absolute
+        top: 50%
+        left: 0
+        transform: translateY(-50%)
+        &_phone
+            font-size: 20px
+        &_email
+            font-size: 15px
+        &_telegram
+            font-size: 22px
+        .icon
+            display: block
+
+.contacts-icons
+    position: absolute
+    left: 0
+    top: 0
+    right: 0
+    bottom: 0
+    overflow: hidden
+    &__inner
+        position: relative
+        height: 100%
+    &__svg
+        left: 205px
+        bottom: 25px
+        z-index: 2
+        &_blurred
+            filter: blur(10.2px)
+            left: 115px
+            bottom: -60px
+            font-size: 200px
+            z-index: 1
+        &_small
+            filter: blur(10.2px)
+            font-size: 165px
+            right: 99px
+            bottom: auto
+            top: -35px
+            left: auto

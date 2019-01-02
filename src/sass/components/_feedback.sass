@@ -1,0 +1,89 @@
+.feedback
+	padding: 51px 73px 55px
+	background-color: $white
+	border-radius: 8px
+	box-shadow: 0 0 20px 0 rgba($shadowColor, 0.12)
+	+xs
+		padding: 20px
+
+	&__title
+		text-align: center
+		line-height: 1.35
+
+	&__form
+		margin-top: 40px
+		+xs
+			margin-top: 20px
+
+
+.feedback-form
+	&__item
+		&:not(:first-child)
+			margin-top: 15px
+
+	&__submit
+		min-height: 50px
+		max-width: 300px
+		position: relative
+		display: flex
+		justify-content: center
+		align-items: center
+		margin: 30px auto 0
+		+sm
+			min-height: 80px
+
+	&__submit-button
+
+	&__progress-bar
+		pointer-events: none
+		position: absolute
+		height: 10px
+		width: 0
+		top: 50%
+		left: 50%
+		transform: translateX(-50%) translateY(-50%)
+		border-radius: 200px
+		background: $blue
+
+	&__checkmark
+		display: flex
+		justify-content: center
+		align-items: center
+		position: absolute
+		top: 50%
+		transform: translateY(-50%) translateX(-50%)
+		left: 50%
+		right: 0
+		.icon
+			font-size: 40px
+			fill: transparent
+			stroke: $white
+			stroke-width: 2px
+			stroke-dasharray: 42px
+			stroke-dashoffset: 42px
+			stroke-linecap: round
+			stroke-linejoin: round
+
+
+.form-input
+	width: 100%
+
+.input
+	display: block
+	width: 100%
+	height: 50px
+	padding: 15px 20px
+	border-radius: 4px
+	border: 1px solid rgba($inputBorder, .2)
+	color: $gray
+	font-family: $roboto
+	font-size: 14px
+	+placeholder
+		color: $gray
+		font-size: 14px
+
+textarea.input
+	height: 157px
+	resize: none
+
+

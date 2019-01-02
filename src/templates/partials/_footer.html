@@ -1,0 +1,22 @@
+<footer class="footer">
+    <div class="footer__inner inner inner_lg">
+        <div class="footer__copyright">
+            © All rights reserved
+        </div>
+        <div class="footer__social">
+            <ul class="social">
+                {% for item in [
+                    'facebook',
+                    'twitter',
+                    'telegram'
+                ] %}
+                    <li class="social__item">
+                        <a href="#" class="social__link social__link_{{ item }}">
+                            {{ mixins.icon(item) }}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</footer>

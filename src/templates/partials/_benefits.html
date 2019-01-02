@@ -1,0 +1,53 @@
+<section class="benefits" id="benefits">
+    <div class="benefits__inner inner inner_sm">
+        <h2 class="benefits__title title"
+            data-anim-type="staged" data-anim-delay="0" data-anim-duration="0.8">
+            Our benefits
+        </h2>
+        <div class="benefits__subtitle"
+             data-anim-type="wave" data-anim-delay="0.2" data-anim-duration="0.8">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium pretium tempor.
+        </div>
+        <div class="benefits__content">
+            {% for item in [
+                {
+                    svg: 'shield',
+                    title: 'Quality assurance',
+                    text: 'We offer the best front-end development services for your digital agency and startups. Our team uses the latest technologies such as HTML, CSS, JS'
+                },
+                {
+                    svg: 'multitask',
+                    title: 'Experience',
+                    text: 'We offer the best front-end development services for your digital agency and startups. Our team uses the latest technologies such as HTML, CSS, JS'
+                },
+                {
+                    svg: 'result',
+                    title: 'We are working on the result',
+                    text: 'We offer the best front-end development services for your digital agency and startups. Our team uses the latest technologies such as HTML, CSS, JS'
+                },
+                {
+                    svg: 'specialization',
+                    title: 'Specialization',
+                    text: 'We offer the best front-end development services for your digital agency and startups. Our team uses the latest technologies such as HTML, CSS, JS'
+                }
+            ] %}
+                <div class="benefits__item benefits-item">
+                    <div class="benefits-item__icon"
+                         data-anim-type="staged" data-anim-delay="{{loop.index * 0.2}}" data-anim-duration="0.6">
+                        <img src="./img/{{ item.svg }}.svg" alt="icon">
+                    </div>
+                    <h3 class="benefits-item__title"
+                        data-anim-type="staged" data-anim-delay="{{(loop.index * 0.2) + 0.1}}" data-anim-duration="0.6">
+                        {{ item.title }}
+                    </h3>
+                    <div class="benefits-item__text"
+                         data-anim-type="staged" data-anim-delay="{{(loop.index * 0.2) + 0.2}}" data-anim-duration="0.6">
+                        <p>
+                            {{ item.text }}
+                        </p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

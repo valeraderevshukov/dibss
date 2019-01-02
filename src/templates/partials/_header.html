@@ -1,1 +1,68 @@
-<p>Hello from partials/_header.html</p>
+{% import 'data/header-data.html' as data %}
+<header class="header js-header">
+  <div class="header__inner">
+    <h1 class="header__logo logo">
+      {#<a href="#">{{ mixins.icon('DibssSolutions_logo') }}</a>#}
+      <a href="#">
+        {{ data.svg | safe }}
+      </a>
+    </h1>
+    <div class="header__wrap">
+      <div class="header__left">
+        <nav class="header__menu">
+          <ul class="main-menu">
+            {% for item in [
+              {
+                name: 'Solutions',
+                anchor: 'benefits'
+              },
+              {
+                name: 'About us',
+                anchor: 'how-work'
+              },
+              {
+                name: 'Clients',
+                anchor: 'portfolio'
+              },
+              {
+                name: 'News & Events',
+                anchor: ''
+              },
+              {
+                name: 'Contact us',
+                anchor: 'contacts'
+              }
+            ] %}
+              <li class="main-menu__item"
+                  data-anim-type="staged" data-anim-direction="ltr" data-anim-delay="{{ 0.8 + (loop.index) * 0.1}}" data-anim-duration="0.3">
+                <a href="#{{ item.anchor }}" class="main-menu__link js-menu-link">
+                  {{ item.name }}
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        </nav>
+      </div>
+      <div class="header__right">
+        <div class="language"
+             data-anim-type="staged" data-anim-direction="rtl" data-anim-delay="1.5" data-anim-duration="0.3">
+          <div class="language__current">{{ mixins.icon('earth') }}<a href="#">en</a></div>
+          <div class="language__arrow">
+            {{ mixins.icon('chevron-down') }}
+          </div>
+          <ul class="language__list">
+            {# <li class="language__item active"><a href="#" class="language__link">en</a></li> #}
+            <li class="language__item"><a href="#" class="language__link">ru</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <button type="button" class="toggle-menu js-toggle-menu">
+            <span class="sandwich js-sandwich">
+                <span class="sw-topper"></span>
+                <span class="sw-bottom"><span class="sw-bottom__inner"></span></span>
+                <span class="sw-footer"></span>
+            </span>
+    </button>
+  </div>
+</header>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 38 22" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#89969F;}
+</style>
+<path class="st0" d="M0,2.2h6.7v2.2h6.7V0h11.2v4.4h6.7V2.2H38v6.6h-6.7V6.6h-4c5.1,2.9,8.4,8.3,8.4,14.3c0,0.6-0.5,1.1-1.1,1.1
+	c-0.6,0-1.1-0.5-1.1-1.1c0,0,0,0,0,0c0-5.8-3.6-11-8.9-13.2V11H13.4V7.7c-5.3,2.2-8.9,7.4-8.9,13.2C4.5,21.5,4,22,3.4,22
+	c-0.6,0-1.1-0.5-1.1-1.1c0,0,0,0,0,0c0-6,3.3-11.4,8.4-14.3h-4v2.2H0C0,8.8,0,2.2,0,2.2z"/>
+</svg>

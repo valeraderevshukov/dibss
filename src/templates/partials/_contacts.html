@@ -1,0 +1,58 @@
+<section class="contacts" id="contacts">
+  <div class="contacts__wrap">
+    <div class="contacts__inner inner inner_lg">
+      <div class="contacts__content">
+        <div class="contacts__text">
+          <h2 class="contacts__title title title_sm title_white"
+              data-anim-type="staged" data-anim-delay="0" data-anim-duration="0.8">
+            Any question? Reach out to us and we’ll get back to you shortly.
+          </h2>
+          <ul class="contacts__list">
+            <li class="contacts__item contacts-item"
+                data-anim-type="staged" data-anim-delay="0.2" data-anim-duration="0.5">
+              <div class="contacts-item__icon contacts-item__icon_phone">
+                {{ mixins.icon('phone') }}
+              </div>
+              <a href="tel:+3101234567" class="contacts-item__link">+31 0123 4567</a>
+            </li>
+            <li class="contacts__item contacts-item"
+                data-anim-type="staged" data-anim-delay="0.4" data-anim-duration="0.5">\
+              <div class="contacts-item__icon contacts-item__icon_email">
+                {{ mixins.icon('email') }}
+              </div>
+              <a href="mailto:info@bit.io" class="contacts-item__link">info@bit.io</a>
+            </li>
+            <li class="contacts__item contacts-item"
+                data-anim-type="staged" data-anim-delay="0.6" data-anim-duration="0.5">
+              <div class="contacts-item__icon contacts-item__icon_telegram">
+                {{ mixins.icon('telegram') }}
+              </div>
+              <a href="https://telegram.org/" class="contacts-item__link">Join us on Telegram</a>
+            </li>
+          </ul>
+        </div>
+        <div class="contacts__feedback">
+          {% include "./_feedback.html" %}
+        </div>
+
+      </div>
+    </div>
+    <div class="contacts__icons contacts-icons">
+      <div class="contacts-icons__inner inner inner_lg">
+        <div class="contacts-icons__svg svg-triangle js-parallax-item">
+          {{ mixins.icon('triangle') }}
+        </div>
+        <div
+          class="contacts-icons__svg contacts-icons__svg_blurred svg-triangle svg-triangle_blurred js-parallax-item-reverse">
+          {{ mixins.icon('triangle') }}
+        </div>
+        <div class="contacts-icons__svg svg-triangle js-parallax-item">
+          {{ mixins.icon('triangle') }}
+        </div>
+        <div class="contacts-icons__svg contacts-icons__svg_small svg-triangle js-parallax-item-reverse">
+          {{ mixins.icon('triangle') }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

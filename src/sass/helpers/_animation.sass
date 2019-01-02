@@ -1,0 +1,29 @@
+.wave-anim__word
+	display: inline-block
+	position: relative
+
+.wave-anim__letter
+	opacity: 0
+	position: relative
+	white-space: pre
+	display: inline-block
+	transform: translateY(15px)
+
+*[data-anim-type]
+	position: relative
+	opacity: 0
+
+*[data-anim-type^='staged']
+	transform: translateY(75px)
+
+*[data-logo-anim]
+	opacity: 0
+
+*[data-anim-direction^='ltr']
+	transform: translateY(0) translateX(-75px)
+
+*[data-anim-direction^='rtl']
+	transform: translateY(0) translateX(75px)
+
+*[data-anim-direction^='top']
+	transform: translateY(-75px) translateX(0)

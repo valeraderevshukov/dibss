@@ -1,0 +1,51 @@
+//FONTS
+=fontpath($name, $name1, $file)
+	src: local($name), local($name1), url("../fonts/" + $file + ".woff2") format("woff2"), url("../fonts/" + $file + ".woff") format("woff")
+=fontdefault($style, $weight, $name)
+	font-family: $name
+	font-style: $style
+	font-weight: $weight
+
+// ROBOTO
+$roboto: 'Roboto'
+@font-face
+	+fontdefault(normal, 900, $roboto)
+	+fontpath('Roboto-Black', 'Roboto-Black', Roboto-Black)
+// @font-face
+// 	+fontdefault(italic, 900, $roboto)
+// 	+fontpath('Roboto-BlackItalic', 'Roboto-BlackItalic', Roboto-BlackItalic)
+	
+// @font-face
+// 	+fontdefault(normal, 700, $roboto)
+// 	+fontpath('Roboto-Bold', 'Roboto-Bold', Roboto-Bold)
+// @font-face
+// 	+fontdefault(italic, 700, $roboto)
+// 	+fontpath('Roboto-BoldItalic', 'Roboto-BoldItalic', Roboto-BoldItalic)
+
+// @font-face
+// 	+fontdefault(normal, 500, $roboto)
+// 	+fontpath('Roboto-Medium', 'Roboto-Medium', Roboto-Medium)
+// @font-face
+// 	+fontdefault(italic, 500, $roboto)
+// 	+fontpath('Roboto-MediumItalic', 'Roboto-MediumItalic', Roboto-MediumItalic)
+	
+@font-face
+	+fontdefault(normal, 400, $roboto)
+	+fontpath('Roboto-Regular', 'Roboto-Regular', Roboto-Regular)
+// @font-face
+// 	+fontdefault(italic, 400, $roboto)
+// 	+fontpath('Roboto-Italic', 'Roboto-Italic', Roboto-Italic)
+	
+// @font-face
+// 	+fontdefault(normal, 300, $roboto)
+// 	+fontpath('Roboto-Light', 'Roboto-Light', Roboto-Light)
+// @font-face
+// 	+fontdefault(italic, 300, $roboto)
+// 	+fontpath('Roboto-LightItalic', 'Roboto-LightItalic', Roboto-LightItalic)
+	
+// @font-face
+// 	+fontdefault(normal, 300, $roboto)
+// 	+fontpath('Roboto-Thin', 'Roboto-Thin', Roboto-Thin)
+// @font-face
+// 	+fontdefault(italic, 300, $roboto)
+// 	+fontpath('Roboto-ThinItalic', 'Roboto-ThinItalic', Roboto-ThinItalic)

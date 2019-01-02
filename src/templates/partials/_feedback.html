@@ -1,0 +1,31 @@
+<div class="feedback">
+  <h2 class="feedback__title title"
+      data-anim-type="staged" data-anim-delay="0.2" data-anim-duration="0.8">
+    Get in touch
+  </h2>
+  <form class="feedback__form feedback-form js-form">
+    <div class="feedback-form__item form-input"
+         data-anim-type="staged" data-anim-delay="0.4" data-anim-duration="0.6">
+      <input class="input" type="text" placeholder="Your Name">
+    </div>
+    <div class="feedback-form__item form-input"
+         data-anim-type="staged" data-anim-delay="0.6" data-anim-duration="0.6">
+      <input class="input" type="email" placeholder="Your Email">
+    </div>
+    <div class="feedback-form__item form-input"
+         data-anim-type="staged" data-anim-delay="0.8" data-anim-duration="0.6">
+      <textarea class="input" placeholder="Your Message"></textarea>
+    </div>
+    <div class="feedback-form__submit"
+         data-anim-type="staged" data-anim-delay="1" data-anim-duration="0.6">
+      <button type="submit" class="feedback-form__submit-button submit-button js-submit-button">
+        submit
+      </button>
+      <div class="feedback-form__progress-bar js-submit-progress">
+        <div class="feedback-form__checkmark js-submit-checkmark">
+          {{ mixins.icon('checkmark') }}
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
