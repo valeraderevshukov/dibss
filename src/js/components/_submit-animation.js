@@ -41,8 +41,8 @@ function triggerSubmitAnimation() {
 
 $(window).ready(() => {
 
-  $('.js-form').on('submit',() => {
-    submitButton.css('pointer-events','none');
-    triggerSubmitAnimation();
-  });
+  // $('.js-form').on('submit',() => {
+  //   submitButton.css('pointer-events','none');
+  //   triggerSubmitAnimation();
+  // });
 });

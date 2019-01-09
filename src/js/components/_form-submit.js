@@ -67,6 +67,8 @@ $(document).ready(function() {
       success() {
         form.get(0).reset();
         var sentMessage = $('.js-success');
+        formSubmit.css('pointer-events','none');
+        triggerSubmitAnimation();
         sentMessage.fadeIn(300);
       },
       error: function(jqXHR, ajaxSettings, thrownError) {
