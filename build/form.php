@@ -5,7 +5,8 @@
 	$subject = 'Обратная связь Dibss Solutions';
 	/* form fields (getting by attr name) */
 	$name = $_POST['name'];
-	$phone = $_POST['phone'];
+	$email = $_POST['email'];
+	$message = $_POST['message'];
 	
 	/* message */
 	$body = '
@@ -15,7 +16,8 @@
 		</head>
 		<body>'
 		   .' <p>Имя: <strong>' . $name . '</strong></p>'
-		   .' <p>Телефон: <strong>' . $phone . '</strong></p>'
+		   .' <p>Email: <strong>' . $email . '</strong></p>'
+		   .' <p>Сообщение: ' . $message . '</p>'
 		.'</body>
 		</html>';
 	/* For sending HTML email you can set up headers Content-type. */
