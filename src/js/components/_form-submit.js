@@ -2,6 +2,48 @@ import {BODY} from './../constants';
 import validate from 'jquery-validation';
 
 $(document).ready(function() {
+  $.validator.messages.required = 'It is necessary to fill the specified field';
+
+  $.validator.setDefaults({
+    debug: true
+  });
+
+  var form = $('.js-form');
+  var modal = $('[data-modal]');
+
+  form.each((i, el) => {
+    $(el).validate({
+      rules: {
+        'name': {
+          required: true
+        },
+        'email': {
+          required: true
+        },
+        'message': {
+          required: true
+        }
+      }
+    });
+  });
+
+  var formSubmit = $('.js-submit-button');
+
+  formSubmit.each((i, submit) => {
+    $(submit).on('click', function(e) {
+      console.log('submit');
+      var form = $(submit).parents('.js-form');
+      form.valid();
+      if (!form.valid()) {
+        e.preventDefault();
+      }
+      // else {
+      //   setTimeout(() => {
+      //     modal.removeClass('is-open');
+      //   }, 3000);
+      // }
+    });
+  });
   $('.js-form').on('submit', e => {
     e.preventDefault();
   
@@ -47,49 +89,6 @@ $(document).ready(function() {
     });
   });
 
-
-  $.validator.messages.required = 'It is necessary to fill the specified field';
-
-  $.validator.setDefaults({
-    debug: true
-  });
-
-  var form = $('.js-form');
-  var modal = $('[data-modal]');
-
-  form.each((i, el) => {
-    $(el).validate({
-      rules: {
-        'name': {
-          required: true
-        },
-        'email': {
-          required: true
-        },
-        'message': {
-          required: true
-        }
-      }
-    });
-  });
-
-  var formSubmit = $('.js-btn-submit');
-
-  formSubmit.each((i, submit) => {
-    $(submit).on('click', function(e) {
-      console.log('submit');
-      var form = $(submit).parents('.js-form');
-      form.valid();
-      if (!form.valid()) {
-        e.preventDefault();
-      }
-      // else {
-      //   setTimeout(() => {
-      //     modal.removeClass('is-open');
-      //   }, 3000);
-      // }
-    });
-  });
 
 });
 
