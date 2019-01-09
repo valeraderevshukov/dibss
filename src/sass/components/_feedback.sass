@@ -19,7 +19,7 @@
 .feedback-form
 	&__item
 		&:not(:first-child)
-			margin-top: 15px
+			margin-top: 25px
 
 	&__submit
 		min-height: 50px
@@ -81,9 +81,22 @@
 	+placeholder
 		color: $gray
 		font-size: 14px
+	&.error
+		color: red
+		border-color: red
+		+placeholder
+			color: red
 
 textarea.input
 	height: 157px
 	resize: none
+
+label.error
+	position: absolute
+	top: 100%
+	left: 0
+	padding-left: 20px
+	color: red
+	font-size: 12px
 
 

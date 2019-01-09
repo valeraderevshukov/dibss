@@ -41,7 +41,7 @@ function triggerSubmitAnimation() {
 
 $(window).ready(() => {
 
-  submitButton.click(() => {
+  $('.js-form').on('submit',() => {
     submitButton.css('pointer-events','none');
     triggerSubmitAnimation();
   });

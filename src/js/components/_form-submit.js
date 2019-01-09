@@ -2,7 +2,7 @@ import {BODY} from './../constants';
 import validate from 'jquery-validation';
 
 $(document).ready(function() {
-  $.validator.messages.required = 'It is necessary to fill the specified field';
+  // $.validator.messages.required = 'It is necessary to fill the specified field';
 
   $.validator.setDefaults({
     debug: true
@@ -23,6 +23,14 @@ $(document).ready(function() {
         'message': {
           required: true
         }
+      },
+      messages: {
+        name: 'Пожалуйста, введите ваше имя',
+        email: {
+          required: 'Пожалуйста, введите вашу электронную почту',
+          email: 'Электронная почта должна быть в формате name@domain.com'
+        },
+        message: 'Пожалуйста, расскажите нам о проекте'
       }
     });
   });
@@ -31,7 +39,6 @@ $(document).ready(function() {
 
   formSubmit.each((i, submit) => {
     $(submit).on('click', function(e) {
-      console.log('submit');
       var form = $(submit).parents('.js-form');
       form.valid();
       if (!form.valid()) {
