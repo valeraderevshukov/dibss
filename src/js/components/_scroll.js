@@ -9,7 +9,7 @@ $(window).ready(function() {
   var headerScene = new ScrollMagic.Scene({
     triggerElement: '.header'
   })
-    .addIndicators({name: 'headeer Scene'})
+    // .addIndicators({name: 'headeer Scene'})
     .addTo(controller)
     .on('enter', () => {
       animations.triggerHeaderSceneAnimation();
@@ -19,7 +19,7 @@ $(window).ready(function() {
     triggerElement: '.main',
     reverse: false
   })
-    .addIndicators({name: 'main Scene'})
+    // .addIndicators({name: 'main Scene'})
     .addTo(controller)
     .on('enter', () => {
       animations.triggerMainSceneAnimation();
@@ -29,7 +29,8 @@ $(window).ready(function() {
     triggerElement: '.benefits',
     reverse: false
   })
-    .addIndicators({name: 'benefits Scene'})
+    // .addIndicators({name: 'benefits Scene'})
+    .offset(-180)
     .addTo(controller)
     .on('enter', () => {
       animations.triggerBenefitsSceneAnimation();
@@ -39,7 +40,8 @@ $(window).ready(function() {
     triggerElement: '.how-work',
     reverse: false
   })
-    .addIndicators({name: 'how-work Scene'})
+    // .addIndicators({name: 'how-work Scene'})
+    .offset(-180)
     .addTo(controller)
     .on('enter', () => {
       animations.triggerHowWorkSceneAnimation();
@@ -49,7 +51,8 @@ $(window).ready(function() {
     triggerElement: '.portfolio',
     reverse: false
   })
-    .addIndicators({name: 'portfolio Scene'})
+    // .addIndicators({name: 'portfolio Scene'})
+    .offset(-180)
     .addTo(controller)
     .on('enter', () => {
       animations.triggerPortfolioSceneAnimation();
@@ -59,7 +62,8 @@ $(window).ready(function() {
     triggerElement: '.contacts',
     reverse: false
   })
-    .addIndicators({name: 'contacts Scene'})
+    // .addIndicators({name: 'contacts Scene'})
+    .offset(-180)
     .addTo(controller)
     .on('enter', () => {
       animations.triggerContactsSceneAnimation();

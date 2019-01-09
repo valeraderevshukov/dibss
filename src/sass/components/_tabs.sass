@@ -41,9 +41,11 @@
         width: 65%
         +sm
             width: 100%
-            margin-top: 40px
+            margin-top: 20px
     &__container
         padding-left: 153px
+        +lg
+            padding-left: 100px
         +md
             padding-left: 50px
         +sm
@@ -58,13 +60,25 @@
         color: $gray
         line-height: 1
         min-height: 99px
+        text-transform: uppercase
+        &:not(:last-child)
+            margin-bottom: 5px
+            +sm
+                margin-bottom: 10px
         +sm
+            margin: 0 10px 10px 0
             min-height: auto
             padding: 10px 15px
-            font-size: 16px
+            font-size: 13px
         &.is-active,&:hover
             color: $blue
             box-shadow: 0 0 20px 0 rgba($shadowColor, 0.12)
+            svg path
+                fill: $blue
+        svg 
+            opacity: 1
+            path
+                transition: fill .3s
     &__icon
         margin-right: 27px
         transition: margin .3s
@@ -73,6 +87,7 @@
         .tabs__item.is-active &,
         .tabs__item:hover &
             margin-right: 35px
+            background-image: none !important
             +sm
                 margin-right: 15px
         .icon
@@ -84,26 +99,40 @@
                 font-size: 19px
             &-css,
             &-javascript
-                font-size: 28px
+                font-size: 32px
             &-animation
                 font-size: 22px
             &-resources
                 font-size: 33px
             &-github
                 font-size: 36px
+        &_pacman
+            background-position: top
+            background-repeat: no-repeat
+            background-size: contain
+            background-image: none !important
+            svg
+                // opacity: 0
+                tabs__item.is-active &,
+                .tabs__item:hover &
+                    opacity: 1
     &__images
         margin-top: 30px
         display: flex
+        flex-wrap: wrap
     &__img
-        width: 25%
+        margin: 0 15px 15px 0
         display: flex
         align-items: center
         justify-content: center
-        &:not(:first-child)
-            margin-left: 24px
+        font-weight: 700 
+        text-transform: uppercase
         img
             display: block
-            max-width: 100%
+            max-width: 40px
+        &_w100
+            img
+                max-width: 100px
     &__text
         max-width: 487px
         +sm

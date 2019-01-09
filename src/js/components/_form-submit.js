@@ -1,4 +1,6 @@
 import {BODY} from './../constants';
+import validate from 'jquery-validation';
+
 $(document).ready(function() {
   $('.js-form').on('submit', e => {
     e.preventDefault();
@@ -44,19 +46,50 @@ $(document).ready(function() {
       }
     });
   });
-  
-  // $('.js-message-sending').on('click', function(e) {
-  //   var target = event.target;
-  //   if ($(target).hasClass('js-close')) {
-  //     $(target)
-  //       .parents('.js-message-sending')
-  //       .fadeOut(300);
-  //   }
-  // });
+
+
+  $.validator.messages.required = 'It is necessary to fill the specified field';
+
+  $.validator.setDefaults({
+    debug: true
+  });
+
+  var form = $('.js-form');
+  var modal = $('[data-modal]');
+
+  form.each((i, el) => {
+    $(el).validate({
+      rules: {
+        'name': {
+          required: true
+        },
+        'email': {
+          required: true
+        },
+        'message': {
+          required: true
+        }
+      }
+    });
+  });
+
+  var formSubmit = $('.js-btn-submit');
+
+  formSubmit.each((i, submit) => {
+    $(submit).on('click', function(e) {
+      console.log('submit');
+      var form = $(submit).parents('.js-form');
+      form.valid();
+      if (!form.valid()) {
+        e.preventDefault();
+      }
+      // else {
+      //   setTimeout(() => {
+      //     modal.removeClass('is-open');
+      //   }, 3000);
+      // }
+    });
+  });
+
 });
-// BODY.on('click', e => {
-//   if (!$(e.target).closest('.js-message-sending-inner').length ) {
-//     $('.js-message-sending').fadeOut(300);
-//   };
-// });
 

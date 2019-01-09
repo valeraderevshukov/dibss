@@ -27,6 +27,14 @@ gulp.task('copy:img', function() {
         ])
         .pipe(gulp.dest(config.dest.img));
 });
+gulp.task('copy:faicon', function() {
+    return gulp
+        .src([
+            config.src.faicon + '/**/*.{jpg,png,jpeg,svg,gif,json,xml}'
+        ])
+        .pipe(gulp.dest(config.dest.root));
+});
+
 
 gulp.task('copy:video', function() {
   return gulp
@@ -43,7 +51,7 @@ gulp.task('copy:php', function() {
 gulp.task('copy', [
     'copy:img',
     // 'copy:rootfiles',
-    // 'copy:lib',
+    'copy:faicon',
     'copy:video',
     'copy:fonts',
     'copy:php'

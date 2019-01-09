@@ -1,9 +1,7 @@
 <section class="how-work" id="how-work">
     <div class="how-work__inner inner">
         <h2 class="how-work__title title"
-            data-anim-type="staged" data-anim-delay="0" data-anim-duration="0.6">
-            This is how it works
-        </h2>
+            data-anim-type="staged" data-anim-delay="0" data-anim-duration="0.6">Используемые технологии</h2>
         <div class="how-work__tabs tabs" data-tabs>
             <div class="tabs__out">
                 <ul class="tabs__list">
@@ -29,11 +27,6 @@
                             text: 'animation'
                         },
                         {
-                            id: 'resources',
-                            icon: 'resources',
-                            text: 'resources'
-                        },
-                        {
                             id: 'tools',
                             icon: 'github',
                             text: 'tools'
@@ -41,37 +34,100 @@
                     ] %}
                         <li class="tabs__item" data-tabs-control="{{ item.id }}"
                             data-anim-type="staged" data-anim-delay="{{loop.index * 0.2}}" data-anim-duration="0.6">
-                            <span class="tabs__icon">{{ mixins.icon( item.icon ) }}</span>
+                            {% if loop.index == 4 %}
+                            <span class="tabs__icon tabs__icon_pacman" style="background-image: url(./img/pacman-def.svg);">
+                                <svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" width="28px" height="28px" viewBox="0 0 128 128" xml:space="preserve">
+                                    <g>
+                                        <path fill="#89969f" d="M64,0a64,64,0,0,1,64,64H0A64,64,0,0,1,64,0Z"/>
+                                        <animateTransform attributeName="transform" type="rotate" values="0 64 64;-40 64 64;0 64 64" dur="500ms" repeatCount="indefinite"></animateTransform>
+                                    </g>
+                                    <g>
+                                        <path fill="#89969f" d="M64,128A64,64,0,0,1,0,64H128A64,64,0,0,1,64,128Z"/>
+                                        <animateTransform attributeName="transform" type="rotate" values="0 64 64;40 64 64;0 64 64" dur="500ms" repeatCount="indefinite"></animateTransform>
+                                    </g>
+                                </svg>
+                            </span>
+                            {% else %}
+                            <span class="tabs__icon">
+                                {{ mixins.icon( item.icon ) }}
+                            </span>
+                            {% endif %}
                             {{ item.text }}
                         </li>
                     {% endfor %}
                 </ul>
             </div>
             <div class="tabs__wrapper" data-tabs-wrapper>
-                {% for item in [
-                            'html',
-                            'css',
-                            'javascript',
-                            'animation',
-                            'resources',
-                            'tools'
-                    ] %}
-                    <div class="tabs__container" data-tabs-container="{{ item }}">
-                        <div class="tabs__text">
-                            <p data-anim-type="staged" data-anim-delay="0.2" data-anim-duration="0.6">
-                                The trading platform is designed for both beginners and advanced traders. No prior knowledge of trading or experience with cryptocurrencies is required when you use the Blockport platform. 
-                                Buy your first cryptocurrencies and instantly access them through your personal dashboard.
-                            </p>
-                        </div>
-                        <div class="tabs__images"
-                             data-anim-type="staged" data-anim-delay="0.4 " data-anim-duration="0.6">
-                            <div class="tabs__img"><img src="./img/nunjucks.png" alt="img"></div>
-                            <div class="tabs__img"><img src="./img/pug.png" alt="img"></div>
-                            <div class="tabs__img"><img src="./img/nunjucks.png" alt="img"></div>
-                            <div class="tabs__img"><img src="./img/pug.png" alt="img"></div>
-                        </div>
+                <div class="tabs__container" data-tabs-container="html">
+                    <div class="tabs__text">
+                        <p data-anim-type="staged" data-anim-delay="0.2" data-anim-duration="0.6">
+                            В качестве основного шаблонизатора мы используем nunjucks, это позволяет нам ускорить процесс написания разметки HTML и сделать поддержку кода удобней и универсальней. Для облегчения использования и расширяемости проекта мы используем технологию компонентного подхода, которая описана в правилах именования css селекторов по методологии БЭМ.
+                        </p>
                     </div>
-                {% endfor %}
+                    <div class="tabs__images"
+                         data-anim-type="staged" data-anim-delay="0.4 " data-anim-duration="0.6">
+                        <div class="tabs__img"><img src="./img/nunjucks.png" alt="nunjucks"></div>
+                        <div class="tabs__img"><img src="./img/pug.png" alt="pug"></div>
+                        <div class="tabs__img"><img src="./img/swig.jpg" alt="swig"></div>
+                        <div class="tabs__img">Twig</div>
+                    </div>
+                </div>
+                <div class="tabs__container" data-tabs-container="css">
+                    <div class="tabs__text">
+                        <p data-anim-type="staged" data-anim-delay="0.2" data-anim-duration="0.6">
+                            Для css используем препроцесор sass, он позволяет использовать функции недоступные в самом CSS, например, переменные, вложенности, миксины, наследование и другие приятные вещи, после компиляции он возвращает нам всем извесный CSS, но сделаный быстрее и удобней.
+                        </p>
+                    </div>
+                    <div class="tabs__images"
+                         data-anim-type="staged" data-anim-delay="0.4 " data-anim-duration="0.6">
+                        <div class="tabs__img"><img src="./img/sass.png" alt="sass"></div>
+                        <div class="tabs__img"><img src="./img/stylus.png" alt="stylus"></div>
+                        <div class="tabs__img"><img src="./img/less.png" alt="less"></div>
+                    </div>
+                </div>
+                <div class="tabs__container" data-tabs-container="javascript">
+                    <div class="tabs__text">
+                        <p data-anim-type="staged" data-anim-delay="0.2" data-anim-duration="0.6">
+                            Используем модульный подход написания компонентов, с умом используем другие патерны. В основном используем jQuery, vanilla так же не проблема.
+                        </p>
+                    </div>
+                    <div class="tabs__images"
+                         data-anim-type="staged" data-anim-delay="0.4 " data-anim-duration="0.6">
+                        <div class="tabs__img"><img src="./img/jq-vs-js.svg" alt="jq-vs-js"></div>
+                        <div class="tabs__img"><img src="./img/es6.png" alt="es6"></div>
+                        <div class="tabs__img"><img src="./img/babel.png" alt="babel"></div>
+                    </div>
+                </div>
+                <div class="tabs__container" data-tabs-container="animation">
+                    <div class="tabs__text">
+                        <p data-anim-type="staged" data-anim-delay="0.2" data-anim-duration="0.6">
+                            У нас большой опыт работы с анимацией, мы знаем все тайны отрисовки элементов браузером и как достичь максимального показателя FPS.
+                        </p>
+                    </div>
+                    <div class="tabs__images"
+                         data-anim-type="staged" data-anim-delay="0.4 " data-anim-duration="0.6">
+                        <div class="tabs__img tabs__img_w100"><img src="./img/canvas.png" alt="canvas"></div>
+                        <div class="tabs__img"><img src="./img/svg.jpg" alt="svg"></div>
+                        <div class="tabs__img"><img src="./img/greensock.svg" alt="greensock"></div>
+                        <div class="tabs__img tabs__img_w100"><img src="./img/animejs.png" alt="animejs"></div>
+                        <div class="tabs__img"><img src="./img/scrollmagic.png" alt="scrollmagic"></div>
+                    </div>
+                </div>
+                <div class="tabs__container" data-tabs-container="tools">
+                    <div class="tabs__text">
+                        <p data-anim-type="staged" data-anim-delay="0.2" data-anim-duration="0.6">
+                            Для максимального нашего с Вами удобства сборки проекта используем связку gulp/webpack. Контроль версий git. Работаем со всеми популярными инструментами веб-дизайна.
+                        </p>
+                    </div>
+                    <div class="tabs__images"
+                         data-anim-type="staged" data-anim-delay="0.4 " data-anim-duration="0.6">
+                        <div class="tabs__img"><img src="./img/git.png" alt="git"></div>
+                        <div class="tabs__img"><img src="./img/gulp.png" alt="gulp"></div>
+                        <div class="tabs__img"><img src="./img/webpack.svg" alt="webpack"></div>
+                        <div class="tabs__img"><img src="./img/sketch.jpeg" alt="sketch"></div>
+                        <div class="tabs__img"><img src="./img/photoshop.jpeg" alt="photoshop"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

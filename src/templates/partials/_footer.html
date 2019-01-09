@@ -1,18 +1,23 @@
 <footer class="footer">
     <div class="footer__inner inner inner_lg">
         <div class="footer__copyright">
-            © All rights reserved
+            &copy; 2018-2019 Dibss Solutions
         </div>
         <div class="footer__social">
             <ul class="social">
                 {% for item in [
-                    'facebook',
-                    'twitter',
-                    'telegram'
+                    {
+                        icon: 'skype',
+                        href: 'skype:DibssSolutions?add'
+                    },
+                    {
+                        icon: 'telegram',
+                        href: 'https://telegram.me/DibssSolutions'
+                    }
                 ] %}
                     <li class="social__item">
-                        <a href="#" class="social__link social__link_{{ item }}">
-                            {{ mixins.icon(item) }}
+                        <a target="_blank" href="{{ item.href }}" class="social__link social__link_{{ item.icon }}">
+                            {{ mixins.icon(item.icon) }}
                         </a>
                     </li>
                 {% endfor %}

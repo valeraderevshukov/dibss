@@ -1,90 +1,106 @@
 .portfolio
-    padding-top: 124px
-    +sm
-        padding-top: 30px
-    &__gallery
-    &__top
-        margin: 40px 0
-        display: flex
-        align-items: center
-        justify-content: space-between
-        +sm
-            flex-direction: column
-            margin: 10px 0
-    &__controls
-        font-size: 14px
-        text-transform: uppercase
-        display: flex
-        +sm
-            flex-wrap: wrap
-        +xs
-            display: none
-    &__control
-        position: relative
-        cursor: pointer
-        user-select: none
-        &:not(:first-child)
-            margin-left: 30px
-        &:before
-            content: ""
-            position: absolute
-            left: 50%
-            width: 115%
-            top: 50%
-            transform: translate(-50%, -50%)
-            height: 1px
-            opacity: 0
-            visibility: hidden
-            background-color: $blue
-            transition: opacity .3s, visibility .3s
-        &.is-active
-            &:before
-                opacity: 1
-                visibility: visible
+	padding-top: 124px
+	+sm
+		padding-top: 30px
+	&__title
+		margin-bottom: 45px
+		+sm
+			margin-top: 20px
+	&__top
+		margin: 40px 0
+		display: flex
+		align-items: center
+		justify-content: space-between
+		+sm
+			flex-direction: column
+			margin: 10px 0
+	&__controls
+		font-size: 14px
+		text-transform: uppercase
+		display: flex
+		+sm
+			flex-wrap: wrap
+		+xs
+			display: none
+	&__control
+		position: relative
+		cursor: pointer
+		user-select: none
+		&:not(:first-child)
+			margin-left: 30px
+		&:before
+			content: ""
+			position: absolute
+			left: 50%
+			width: 115%
+			top: 50%
+			transform: translate(-50%, -50%)
+			height: 1px
+			opacity: 0
+			visibility: hidden
+			background-color: $blue
+			transition: opacity .3s, visibility .3s
+		&.is-active
+			&:before
+				opacity: 1
+				visibility: visible
 
-    &__list
-        &-wrap
-            margin: 0 -12px
-    // &__item
-    //     margin: 0 12px
+	&__list
+		display: flex
+		flex-wrap: wrap
+		&-wrap
+			margin: 0 -12px
+			
+	// &__item
+	//     margin: 0 12px
 
 .portfolio-item
-    width: 50%
-    padding: 12px
-    +sm
-        width: 100%
-    &__wrap
-        position: relative
-        transition: box-shadow .3s
-        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15)
-        &:before
-            content: ""
-            position: absolute
-            left: 0
-            top: 0
-            right: 0
-            bottom: 0
-            background-image: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.86) 73%, #ffffff)
-        +hover
-            box-shadow: 0 11px 33px 0 rgba(7, 42, 68, 0.3)
-    &__title,
-    &__link
-        position: absolute
-        z-index: 1
-    &__img
-        padding: 10px
-        img
-            display: block
-            max-width: 100%
-            +sm
-                width: 100%
-    &__title
-        font-size: 24px
-        color: $blue
-        font-weight: 400
-        left: 32px
-        top: 35px
-        max-width: 250px
-    &__link
-        left: 32px
-        bottom: 0
+	width: 50%
+	padding: 12px
+	+sm
+		width: 100%
+	&__wrap
+		position: relative
+		height: 100%
+		transition: box-shadow .3s
+		box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15)
+		display: block
+		&:before
+			content: ""
+			position: absolute
+			left: 0
+			top: 0
+			right: 0
+			bottom: 0
+			background-image: linear-gradient(to left, rgba(#000, 0), rgba(#000, 0.05) 53%, rgba(#000, 0.35))
+		+hover
+			box-shadow: 0 11px 43px 0 rgba(7, 42, 68, 0.3)
+			.view-button
+				.icon
+					transform: translateX(5px)
+	&__title,
+	&__link
+		position: absolute
+		z-index: 1
+		color: #FFF 
+	&__img
+		// padding: 10px
+		height: 100%
+		img
+			display: block
+			width: 100%
+			height: 100%
+			object-fit: cover
+			object-position: center
+			+sm
+				width: 100%
+	&__title
+		font-size: 24px
+		// color: $blue
+		font-weight: 400
+		left: 32px
+		top: 35px
+		max-width: 250px
+	&__link
+		left: 32px
+		bottom: 0

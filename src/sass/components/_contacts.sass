@@ -1,7 +1,9 @@
 .contacts
     padding: 108px 0 145px
+    +md
+        padding: 108px 0 0
     +sm
-        padding: 30px 0
+        padding: 30px 0 0
     &__wrap
         position: relative
         padding: 99px 0 111px
@@ -36,7 +38,7 @@
             margin-top: 20px
     &__item
         &:not(:first-child)
-            margin-top: 37px
+            margin-top: 32px
             +sm
                 margin-top: 10px
     &__feedback
@@ -68,6 +70,35 @@
             font-size: 22px
         .icon
             display: block
+    &__link
+        position: relative
+        display: inline-block
+        overflow: hidden
+        +hover
+            &:before
+                animation: lineOn 0.3s ease alternate forwards
+        &:before
+            position: absolute
+            content: "" 
+            left: 0
+            width: 100%
+            bottom: 3px
+            height: 1px
+            background-color: $white
+            animation: lineOut 0.3s ease alternate forwards 
+
+@keyframes lineOn
+    0%
+        transform: translateX(-105%)
+    1%
+        transform: translateX(-105%)
+    100%
+        transform: translateX(0)
+@keyframes lineOut
+    0%
+        transform: translateX(0)
+    100%
+        transform: translateX(105%)
 
 .contacts-icons
     position: absolute

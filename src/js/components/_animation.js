@@ -82,25 +82,6 @@ function triggerWaveAnimation(scene) {
     }, delay * 1000);
   });
 
-
-  // $(rows).each(function(index) {
-  //   let reverseCharArray = $(this.reverse());
-  //   let stage = 0.5 / reverseCharArray.length;
-  //
-  //   setTimeout(() => {
-  //     new TimelineMax().staggerTo($(this), 1.5, {
-  //       y: 0,
-  //       x: 0,
-  //       ease: Elastic.easeOut.config(2.5, 0.9)
-  //     }, stage);
-  //
-  //     new TimelineMax().staggerTo($(this), 1.5, {
-  //       opacity: 1,
-  //       ease: Power0.easeNone
-  //     }, stage);
-  //
-  //   }, index * 100);
-  // });
 }
 
 function triggerStagedAnimation(scene) {

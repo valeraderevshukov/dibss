@@ -1,5 +1,7 @@
 .footer
     padding: 80px 0 32px
+    +md
+        padding: 40px 0
     +sm
         padding: 20px 0
     &__inner
@@ -26,6 +28,10 @@
         height: 56px
         border-radius: 50%
         border: 1px solid rgba($blue,.2)
+        font-size: 18px
+        transition: opacity .3s
+        +hover
+            opacity: 0.8
         &_facebook
             font-size: 20px
         &_twitter

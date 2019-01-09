@@ -1,49 +1,45 @@
 <section class="benefits" id="benefits">
     <div class="benefits__inner inner inner_sm">
         <h2 class="benefits__title title"
-            data-anim-type="staged" data-anim-delay="0" data-anim-duration="0.8">
-            Our benefits
-        </h2>
-        <div class="benefits__subtitle"
-             data-anim-type="wave" data-anim-delay="0.2" data-anim-duration="0.8">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium pretium tempor.
-        </div>
+            data-anim-type="staged" data-anim-delay="0" data-anim-duration="0.5">Наши преимущества</h2>
+        {# <div class="benefits__subtitle"
+             data-anim-type="wave" data-anim-delay="0.2" data-anim-duration="0.5">Качественно и в срок!</div> #}
         <div class="benefits__content">
             {% for item in [
                 {
                     svg: 'shield',
-                    title: 'Quality assurance',
-                    text: 'We offer the best front-end development services for your digital agency and startups. Our team uses the latest technologies such as HTML, CSS, JS'
-                },
-                {
-                    svg: 'multitask',
-                    title: 'Experience',
-                    text: 'We offer the best front-end development services for your digital agency and startups. Our team uses the latest technologies such as HTML, CSS, JS'
+                    title: 'Гарантия качества',
+                    text: 'Мы ценим Ваше время и нервы, из-за этого очень скурпулезно подходим к выполнению своих задач, что бы не упустить ни одной мелочи перед передачей верстки на одобрение. Сумарно нашими специалистами реализовано более 300 проектов, от простых леднингов до больших порталов.'
                 },
                 {
                     svg: 'result',
-                    title: 'We are working on the result',
-                    text: 'We offer the best front-end development services for your digital agency and startups. Our team uses the latest technologies such as HTML, CSS, JS'
+                    title: 'Работаем на результат',
+                    text: 'Мы объединили наши цели и знания в организованный процесс, который позволяет нам максимум сосредоточится на задачах закащика и в результате получить максимально гибкий, расширяемый и качественный код.'
+                },
+                {
+                    svg: 'multitask',
+                    title: 'Опыт',
+                    text: 'В нашей команде собраны специалисты с опытом от двух до шести лет. За свой путь мы сталкивались с задачами различной сложности и можем похвастаться опытом работы с проектами которые стали Site of the day на Awwwards. Мы следим за трендами и с умом используем лучшие практики.'
                 },
                 {
                     svg: 'specialization',
-                    title: 'Specialization',
-                    text: 'We offer the best front-end development services for your digital agency and startups. Our team uses the latest technologies such as HTML, CSS, JS'
+                    title: 'Специализация',
+                    text: 'Мы профильная команда, которая занимается версткой веб-сайтов, написанием клиентских скриптов и реализацией css, svg, canvas анимаций, у нас есть понимание того что максимального качества можно достичь лишь когда занимаешся одним делом.'
                 }
             ] %}
                 <div class="benefits__item benefits-item">
                     <div class="benefits-item__icon"
-                         data-anim-type="staged" data-anim-delay="{{loop.index * 0.2}}" data-anim-duration="0.6">
+                         data-anim-type="staged" data-anim-delay="{{loop.index * 0.1}}" data-anim-duration="0.5">
                         <img src="./img/{{ item.svg }}.svg" alt="icon">
                     </div>
                     <h3 class="benefits-item__title"
-                        data-anim-type="staged" data-anim-delay="{{(loop.index * 0.2) + 0.1}}" data-anim-duration="0.6">
+                        data-anim-type="staged" data-anim-delay="{{(loop.index * 0.1) + 0.1}}" data-anim-duration="0.5">
                         {{ item.title }}
                     </h3>
                     <div class="benefits-item__text"
-                         data-anim-type="staged" data-anim-delay="{{(loop.index * 0.2) + 0.2}}" data-anim-duration="0.6">
+                         data-anim-type="staged" data-anim-delay="{{(loop.index * 0.1) + 0.2}}" data-anim-duration="0.5">
                         <p>
-                            {{ item.text }}
+                            {{ item.text | safe }}
                         </p>
                     </div>
                 </div>

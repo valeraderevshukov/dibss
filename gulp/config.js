@@ -27,7 +27,8 @@ var config = {
         iconsFont    : 'src/icons',
         fonts        : 'src/fonts',
         lib          : 'src/lib',
-        video        : 'src/video'
+        video        : 'src/video',
+        faicon       : 'src/faicon'
     },
     dest: {
         root : destPath,

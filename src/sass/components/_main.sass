@@ -1,8 +1,26 @@
 .main
 	position: relative
-	background-image: linear-gradient(to bottom, #20232d, #151720)
 	overflow: hidden
 	color: $white
+	z-index: 1
+	background-image: url("../img/code.jpg") 
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: 0 center
+	
+	&:before
+		position: absolute
+		content: '' 
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		opacity: 1
+		background-image: linear-gradient(to bottom, #20232d, #151720)
+		transition: opacity 0.6s ease-in-out
+		.is-loaded &
+			opacity: .985 
+			transition-delay: 0.9s
 
 	&:after
 		content: ""
@@ -18,22 +36,30 @@
 	&__inner
 		position: relative
 		z-index: 2
+		max-width: 1236px 
 
 	&__content
-		max-width: 418px
 		padding-right: 10px
 		position: relative
+		font-size: 18px
+		max-width: 500px 
 
 		&-icon
 			left: -30px
 			bottom: -118px
-			z-index: -1
-
+			z-index: 1
+			.is-loaded &
+				opacity: 1
+				transition-delay: 1.6s
+				
 			&_blurred
 				filter: blur(10.2px)
 				left: -119px
 				bottom: -185px
 				z-index: -1
+				.is-loaded &
+					opacity: 1
+					transition-delay: 1.9s
 
 			&_sm.svg-triangle
 				left: 5px
@@ -41,7 +67,10 @@
 				font-size: 133px
 				filter: blur(4.2px)
 				bottom: auto
-				opacity: .71
+				z-index: 0
+				.is-loaded &
+					opacity: 0.8
+					transition-delay: 1s
 
 			&_xs.svg-triangle
 				filter: blur(10.2px)
@@ -49,7 +78,10 @@
 				left: 67px
 				top: -86px
 				bottom: auto
-				opacity: .71
+				z-index: -1
+				.is-loaded &
+					opacity: .71
+					transition-delay: 1.2s
 
 	&__wrapper
 		padding: 100px 0 50px
@@ -79,17 +111,21 @@
 
 	&__img
 		position: relative
-		// position: absolute
-		// width: 100%
-		// max-width: 960px
-		width: 960px
-		margin-left: -92px
-		// align-self: auto
+		min-width: 960px
+		min-height: 552px
+		width: 55vw
+		padding-bottom: 31.7vw
+		margin-bottom: 6vh
+		+lg
+			margin-bottom: 0
 		+sm
 			margin-left: 0
 			width: auto
 
 		img
+			position: absolute
+			top: 0
+			left: 0
 			max-width: 100%
 			display: block
 
@@ -110,8 +146,13 @@
 			background-color: rgba(#142338, 0.45)
 
 	&__title
+		position: relative
 		margin: 7px 0 25px
+		z-index: 2
 		text-align: left
+	&__text
+		position: relative
+		z-index: 2
 
 	&__subtitle
 		text-align: left
@@ -120,6 +161,8 @@
 	position: absolute
 	font-size: 230px
 	color: rgba($blue, .22)
+	opacity: 0
+	transition: opacity 1.2s ease-out
 
 	&_blurred
 		color: rgba(7, 42, 68, 0.71)

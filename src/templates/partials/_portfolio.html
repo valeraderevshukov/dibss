@@ -1,9 +1,9 @@
 <section class="portfolio" id="portfolio">
   <div class="portfolio__inner inner inner_lg">
     <h2 class="portfolio__title title"
-        data-anim-type="staged" data-anim-delay="0" data-anim-duration="0.8">Portfolio</h2>
+        data-anim-type="staged" data-anim-delay="0" data-anim-duration="0.8">Портфолио</h2>
     <div class="portfolio__gallery">
-      <div class="portfolio__top"
+      {# <div class="portfolio__top"
            data-anim-type="staged" data-anim-delay="0" data-anim-duration="0.8">
         <ul class="portfolio__controls">
           {% for item in [
@@ -32,40 +32,44 @@
           {% endfor %}
         </ul>
         <a href="#" class="view-button view-button_blue">View all Project {{ mixins.icon('right-arrow') }}</a>
-      </div>
+      </div> #}
       <div class="portfolio__list-wrap">
         <div class="portfolio__list filtr-container">
           {% for item in [
             {
               id: 'ui',
-              title: 'Shoply web Design',
-              img: 'img.png'
-            },
-            {
-              id: 'product',
-              title: 'Shoply web Design',
-              img: 'img.png'
-            },
-            {
-              id: 'mobile-app',
-              title: 'Shoply web Design',
-              img: 'img.png'
+              title: 'City-Voice',
+              img: 'citywoice.jpg',
+              url: 'http://city-voice.ru/'
             },
             {
               id: 'design, ui',
-              title: 'Shoply web Design',
-              img: 'img.png'
+              title: 'IUGO',
+              img: 'iugo1.png',
+              url: 'http://www.iugo.com.uy/'
+            },
+            {
+              id: 'product',
+              title: 'Klimov',
+              img: 'klimov1.png',
+              url: 'http://paradaze.com/'
+            },
+            {
+              id: 'product',
+              title: 'MCGolive',
+              img: 'mcgolive1.png',
+              url: 'https://www.mcgolive.com.uy/home'
             }
           ] %}
             <div class="portfolio__item portfolio-item filtr-item" data-category="{{ item.id }}">
-              <div class="portfolio-item__wrap"
+              <a href="{{ item.url }}" target="_blank" class="portfolio-item__wrap"
                    data-anim-type="staged" data-anim-delay="{{ loop.index * 0.2 }}" data-anim-duration="0.6">
                 <h3 class="portfolio-item__title">{{ item.title }}</h3>
                 <div class="portfolio-item__img">
-                  <img src="./img/{{ item.img }}" alt="sample">
+                  <img src="./img/{{ item.img }}" alt="{{ item.title }}">
                 </div>
-                <a href="#" class="portfolio-item__link view-button">View Project {{ mixins.icon('right-arrow') }}</a>
-              </div>
+                <div class="portfolio-item__link view-button">View Project {{ mixins.icon('right-arrow') }}</div>
+              </a>
             </div>
           {% endfor %}
         </div>
