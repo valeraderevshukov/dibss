@@ -38,11 +38,11 @@ function triggerSubmitAnimation() {
       strokeDashoffset: 0
     });
 }
+export default triggerSubmitAnimation;
+// $(window).ready(() => {
 
-$(window).ready(() => {
-
-  // $('.js-form').on('submit',() => {
-  //   submitButton.css('pointer-events','none');
-  //   triggerSubmitAnimation();
-  // });
-});
+//   $('.js-form').on('submit',() => {
+//     submitButton.css('pointer-events','none');
+//     triggerSubmitAnimation();
+//   });
+// });

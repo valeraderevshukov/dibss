@@ -1,5 +1,6 @@
 import {BODY} from './../constants';
 import validate from 'jquery-validation';
+import triggerSubmitAnimation from './_submit-animation';
 
 $(document).ready(function() {
   // $.validator.messages.required = 'It is necessary to fill the specified field';
