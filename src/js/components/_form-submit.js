@@ -75,7 +75,10 @@ $(document).ready(function() {
         var errorSent = $('.js-error');
         var errorBlock = errorSent.find('.js-error-block');
         form.get(0).reset();
-        errorSent.fadeIn(300);
+        errorSent.fadeIn(100);
+        setTimeout(() => {
+          errorSent.fadeOut(500);
+        },4000);
         // var closeBtn =
         //     '<button class="message-sending__x js-close">&#10006;</button>';
   
