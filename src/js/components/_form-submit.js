@@ -1,5 +1,6 @@
 import {BODY} from './../constants';
 import validate from 'jquery-validation';
+import triggerSubmitAnimation from './_submit-animation';
 
 $(document).ready(function() {
   // $.validator.messages.required = 'It is necessary to fill the specified field';
@@ -67,13 +68,18 @@ $(document).ready(function() {
       success() {
         form.get(0).reset();
         var sentMessage = $('.js-success');
+        formSubmit.css('pointer-events','none');
+        triggerSubmitAnimation();
         sentMessage.fadeIn(300);
       },
       error: function(jqXHR, ajaxSettings, thrownError) {
         var errorSent = $('.js-error');
         var errorBlock = errorSent.find('.js-error-block');
         form.get(0).reset();
-        errorSent.fadeIn(300);
+        errorSent.fadeIn(100);
+        setTimeout(() => {
+          errorSent.fadeOut(500);
+        },4000);
         // var closeBtn =
         //     '<button class="message-sending__x js-close">&#10006;</button>';
   
