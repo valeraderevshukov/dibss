@@ -11,16 +11,12 @@ WIN.ready(() => {
     header.toggleClass('is-open-menu');
   });
 
-  $('.nav__link').on('click', function() {
-    sandwich.removeClass('is-active');
-    header.removeClass('is-open-menu');
-  });
-
-
   link.on('click', function(event) {
     event.preventDefault();
     let thisAttr = $(this).attr('href');
     let position = $(thisAttr).offset().top;
+    sandwich.removeClass('is-active');
+    header.removeClass('is-open-menu');
     SCROLL_TO(Math.floor(position));
   });
 });

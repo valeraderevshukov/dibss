@@ -108,6 +108,7 @@ label.error
 	left: 0
 	right: 0
 	bottom: 80px
+	padding-bottom: 80px
 	background-color: $white
 	user-select: none
 	color: $blue
@@ -118,19 +119,19 @@ label.error
 	&__container
 		position: relative
 		z-index: 1
-		font-size: 27px
-		font-weight: 700
+		font-size: 24px
+		font-weight: 300
 		vertical-align: middle
 		display: inline-block
 		max-width: 430px
 		width: 100%
-		padding: 0 15px
+		+sm
+			font-size: 22px
+		+xs
+			font-size: 18px
 	&__inner
-		padding: 35px 40px 35px
 		max-width: 100%
 		background-color: $white
-		+xs
-			padding: 45px 15px
 	&__x
 		position: absolute
 		top: 20px

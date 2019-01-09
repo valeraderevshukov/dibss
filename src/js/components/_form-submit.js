@@ -70,7 +70,9 @@ $(document).ready(function() {
         var sentMessage = $('.js-success');
         formSubmit.css('pointer-events','none');
         triggerSubmitAnimation();
-        sentMessage.fadeIn(300);
+        setTimeout(() => {
+          sentMessage.fadeIn(300);
+        },3500);
       },
       error: function(jqXHR, ajaxSettings, thrownError) {
         var errorSent = $('.js-error');
