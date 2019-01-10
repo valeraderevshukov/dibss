@@ -26,12 +26,12 @@ $(document).ready(function() {
         }
       },
       messages: {
-        name: 'Пожалуйста, введите ваше имя',
+        name: 'Enter your name',
         email: {
-          required: 'Пожалуйста, введите вашу электронную почту',
-          email: 'Электронная почта должна быть в формате name@domain.com'
+          required: 'Enter the correct email address',
+          email: 'The email address must be in the format name@domain.com'
         },
-        message: 'Пожалуйста, расскажите нам о проекте'
+        message: ''
       }
     });
   });
