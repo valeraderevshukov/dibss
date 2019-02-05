@@ -1,0 +1,86 @@
+<section class="benefits" id="benefits">
+    <div class="benefits__inner inner inner_sm">
+        <h2 class="benefits__title title"
+            data-anim-type="staged" data-anim-delay="0" data-anim-duration="0.5">Why us</h2>
+        <div class="benefits__content">
+            {% for item in [
+                {
+                    svg: 'shield',
+                    title: 'Highest code standards',
+                    text: 'We adhere to the component-based approach to get an easy-to-read code that is concise and provides peak site performance.'
+                },
+                {
+                    svg: 'result',
+                    title: 'Strict and streamlined process',
+                    text: 'Every our expert spends at least 20% of their work time on learning their skills and passing internal exams. Our technology stack is constantly growing.'
+                },
+                {
+                    svg: 'multitask',
+                    title: 'Extensive testing',
+                    text: "Before submitting our work, we check the entire code extensively for reliability, maintaibility and scalability to make sure it's further impovement and adjustment will be quick and cheap."
+                },
+                {
+                    svg: 'specialization',
+                    title: 'On-time delivery',
+                    text: 'As a team, we learn all the ins and outs of new projects before taking them into work and then practice daily stand-ups to anticipate any possible troubles and process bottlenecks.'
+                }
+            ] %}
+                <div class="benefits__item benefits-item">
+                    <div class="benefits-item__icon"
+                         data-anim-type="staged" data-anim-delay="{{loop.index * 0.1}}" data-anim-duration="0.5">
+                        <img src="./img/{{ item.svg }}.svg" alt="icon">
+                    </div>
+                    <h3 class="benefits-item__title"
+                        data-anim-type="staged" data-anim-delay="{{(loop.index * 0.1) + 0.1}}" data-anim-duration="0.5">
+                        {{ item.title }}
+                    </h3>
+                    <div class="benefits-item__text"
+                         data-anim-type="staged" data-anim-delay="{{(loop.index * 0.1) + 0.2}}" data-anim-duration="0.5">
+                        <p>
+                            {{ item.text | safe }}
+                        </p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <h2 class="benefits__title title"
+            data-anim-type="staged" data-anim-delay="0" data-anim-duration="0.5">Dibss in numbers</h2>
+        <div class="benefits__content">
+            {% for item in [
+                {
+                    svg: 'shield',
+                    title: '15+ years',
+                    text: "of the team's total front-end experience"
+                },
+                {
+                    svg: 'result',
+                    title: '300+ completed projects',
+                    text: "check out our founder's <a href='https://github.com/valeraderevshukov' target='_blank'>Github</a>"
+                },
+                {
+                    svg: 'multitask',
+                    title: '2 sites',
+                    text: 'recognized as Sites of the day on <a href="https://www.awwwards.com/" target="_blank">Awwwards</a>'
+                },
+                {
+                    svg: 'specialization',
+                    title: '7 team members',
+                    text: 'ready to take on even the most urgent project'
+                }
+            ] %}
+                <div class="benefits__item benefits-item benefits-item_nh">
+                    <h3 class="benefits-item__title"
+                        data-anim-type="staged" data-anim-delay="{{(loop.index * 0.1) + 0.1}}" data-anim-duration="0.5">
+                        {{ item.title }}
+                    </h3>
+                    <div class="benefits-item__text"
+                         data-anim-type="staged" data-anim-delay="{{(loop.index * 0.1) + 0.2}}" data-anim-duration="0.5">
+                        <p>
+                            {{ item.text | safe }}
+                        </p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

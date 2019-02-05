@@ -12,19 +12,19 @@
           <ul class="main-menu">
             {% for item in [
               {
-                name: 'Подход',
+                name: 'Why us',
                 anchor: 'benefits'
               },
               {
-                name: 'Технологии',
+                name: 'Technologies',
                 anchor: 'how-work'
               },
               {
-                name: 'Портфолио',
+                name: 'Works',
                 anchor: 'portfolio'
               },
               {
-                name: 'Контакты',
+                name: 'Contacts',
                 anchor: 'contacts'
               }
             ] %}
@@ -41,12 +41,12 @@
       <div class="header__right">
         <div class="language"
              data-anim-type="staged" data-anim-direction="rtl" data-anim-delay="0.8" data-anim-duration="0.3">
-          <div class="language__current">{{ mixins.icon('earth') }}<a href="/">ru</a></div>
+          <div class="language__current">{{ mixins.icon('earth') }}<a href="./en.html">en</a></div>
           <div class="language__arrow">
             {{ mixins.icon('chevron-down') }}
           </div>
           <ul class="language__list">
-            <li class="language__item"><a href="./en.html" class="language__link">en</a></li>
+            <li class="language__item"><a href="/" class="language__link">ru</a></li>
           </ul>
         </div>
       </div>

@@ -1,30 +1,28 @@
 <section class="benefits" id="benefits">
     <div class="benefits__inner inner inner_sm">
         <h2 class="benefits__title title"
-            data-anim-type="staged" data-anim-delay="0" data-anim-duration="0.5">Наши преимущества</h2>
-        {# <div class="benefits__subtitle"
-             data-anim-type="wave" data-anim-delay="0.2" data-anim-duration="0.5">Качественно и в срок!</div> #}
+            data-anim-type="staged" data-anim-delay="0" data-anim-duration="0.5">Наши подходы</h2>
         <div class="benefits__content">
             {% for item in [
                 {
                     svg: 'shield',
-                    title: 'Гарантия качества',
-                    text: 'Мы ценим Ваше время и нервы, в связи с этим очень скурпулезно подходим к выполнению своих задач, что бы не упустить ни одной мелочи перед передачей верстки на одобрение. Сумарно нашими специалистами реализовано более 300 проектов, от простых леднингов до больших порталов.'
+                    title: 'Следование стандартам',
+                    text: 'Мы используем компонентный подход. Он помогает писать лаконичный и легкочитаемый код, и добиваться максимальной производительности ваших сайтов.'
                 },
                 {
                     svg: 'result',
-                    title: 'Работаем на результат',
-                    text: 'Мы объединили наши цели и знания в организованный процесс, который позволяет нам максимум сосредоточится на задачах закащика и в результате получить максимально гибкий, расширяемый и качественный код.'
+                    title: 'Строгие процессы',
+                    text: 'Каждый наш сотрудник тратит минимум 20% своего рабочего времени на изучение новых навыков и затем сдает внутренний экзамен. Поэтому наш багаж знаний постоянно растет.'
                 },
                 {
                     svg: 'multitask',
-                    title: 'Опыт',
-                    text: 'В нашей команде собраны специалисты с опытом от двух до шести лет. За свой путь мы сталкивались с задачами различной сложности и можем похвастаться опытом работы с проектами которые стали <a target="_blank" href="https://www.awwwards.com/websites/sites_of_the_day/">Site of the day на Awwwards</a>. Мы следим за трендами и с умом используем лучшие практики.'
+                    title: 'Обширное тестирование',
+                    text: 'Прежде чем показывать свою работу, мы проверяем написанный код на надежность, поддерживаемость и масштабируемость, чтобы убедиться, что дальше его можно будет быстро и дешево изменять и улучшать.'
                 },
                 {
                     svg: 'specialization',
-                    title: 'Специализация',
-                    text: 'Мы профильная команда, которая занимается версткой веб-сайтов, написанием клиентских скриптов и реализацией css, svg, canvas анимаций, у нас есть понимание того что максимального качества можно достичь лишь когда занимаешся одним делом.'
+                    title: 'Соблюдение сроков',
+                    text: 'Как команда, мы всегда изучаем все особенности новых проектов, прежде чем садиться за работу над ними. Мы также проводим ежедневные летучки, чтобы упредить возможные проблемы и задержки в предстоящих задачах.'
                 }
             ] %}
                 <div class="benefits__item benefits-item">
@@ -32,6 +30,45 @@
                          data-anim-type="staged" data-anim-delay="{{loop.index * 0.1}}" data-anim-duration="0.5">
                         <img src="./img/{{ item.svg }}.svg" alt="icon">
                     </div>
+                    <h3 class="benefits-item__title"
+                        data-anim-type="staged" data-anim-delay="{{(loop.index * 0.1) + 0.1}}" data-anim-duration="0.5">
+                        {{ item.title }}
+                    </h3>
+                    <div class="benefits-item__text"
+                         data-anim-type="staged" data-anim-delay="{{(loop.index * 0.1) + 0.2}}" data-anim-duration="0.5">
+                        <p>
+                            {{ item.text | safe }}
+                        </p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <h2 class="benefits__title title"
+            data-anim-type="staged" data-anim-delay="0" data-anim-duration="0.5">Dibss в числах</h2>
+        <div class="benefits__content">
+            {% for item in [
+                {
+                    svg: 'shield',
+                    title: '15+ лет',
+                    text: "суммарного опыта во front-end разработке"
+                },
+                {
+                    svg: 'result',
+                    title: '300+ завершенных проектов',
+                    text: "Многие из них – на <a href='https://github.com/valeraderevshukov' target='_blank'>Github</a>-профиле основателя"
+                },
+                {
+                    svg: 'multitask',
+                    title: '2 сайта',
+                    text: 'были номинированы Sites of the day на наипрестижнейшем сайте <a href="https://www.awwwards.com/" target="_blank">Awwwards</a>'
+                },
+                {
+                    svg: 'specialization',
+                    title: '7 членов команды',
+                    text: 'готовы подключиться даже к самому срочному проекту'
+                }
+            ] %}
+                <div class="benefits__item benefits-item benefits-item_nh">
                     <h3 class="benefits-item__title"
                         data-anim-type="staged" data-anim-delay="{{(loop.index * 0.1) + 0.1}}" data-anim-duration="0.5">
                         {{ item.title }}

@@ -1,4 +1,4 @@
-import {Elastic, Power0, TimelineLite} from 'gsap/all';
+import { TimelineLite } from 'gsap';
 
 let submitButton = $('.js-submit-button');
 let submitProgress = $('.js-submit-progress');

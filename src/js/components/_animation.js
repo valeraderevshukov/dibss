@@ -1,4 +1,4 @@
-import {Elastic, Power0, Sine, TimelineMax, TweenMax} from 'gsap/all';
+import { TimelineLite } from 'gsap';
 
 // let textNodes = $('[data-anim-type]');
 const wordsRegExp = /\S+/g;
@@ -66,13 +66,13 @@ function triggerWaveAnimation(scene) {
         let letters = $(this.reverse());
         let stage = duration / letters.length;
         setTimeout(() => {
-          new TimelineMax().staggerTo(letters, duration, {
+          new TimelineLite().staggerTo(letters, duration, {
             y: 0,
             x: 0,
             ease: Elastic.easeOut.config(2.5, 0.9)
           }, stage);
 
-          new TimelineMax().staggerTo(letters, duration, {
+          new TimelineLite().staggerTo(letters, duration, {
             opacity: 1,
             ease: Power0.easeNone
           }, stage);
@@ -91,7 +91,7 @@ function triggerStagedAnimation(scene) {
     let delay = +$(this).attr(DELAY_ANIMATION_ATTRIBUTE) || 0;
     let duration = +$(this).attr(DURATION_ANIMATION_ATTRIBUTE) || 1;
 
-    new TweenMax.to($(this), duration, {
+    new TimelineLite().to($(this), duration, {
       x: 0,
       y: 0,
       opacity: 1,
@@ -110,7 +110,7 @@ function triggerHeaderSceneAnimation() {
     let delay = +item.attr(DELAY_ANIMATION_ATTRIBUTE) || 0;
     let duration = +item.attr(DURATION_ANIMATION_ATTRIBUTE) || 1;
 
-    new TweenMax.to(item, duration, {
+    new TimelineLite().to(item, duration, {
       x: 0,
       y: 0,
       rotation: 0,

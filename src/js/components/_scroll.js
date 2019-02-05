@@ -1,6 +1,6 @@
 import ScrollMagic from 'scrollmagic';
 import * as animations from './_animation';
-import 'scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min';
+// import 'scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min';
 
 var controller = new ScrollMagic.Controller();
 
